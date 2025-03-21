@@ -1,0 +1,41 @@
+---
+import Layout from '../layouts/main.astro';
+import Header from '@/components/layout/Header';
+import PricingSection from '../components/sections/PricingSection';
+import ScrollingLogos from '../components/sections/ScrollingLogos';
+import TestimonialsSection from '../components/sections/TestimonialsSection';
+import CTASection from '../components/sections/CTASection';
+import Footer from '@/components/layout/Footer';
+---
+
+<Layout>
+  <Header />
+  {/* Hero section specific to pricing */}
+  <div class="min-h-screen">
+    {/* Hero section specific to pricing */}
+    <div class="bg-gradient-to-b from-indigo-50 to-white py-16 px-4">
+      <div class="container mx-auto max-w-7xl text-center">
+        <h1 class="text-4xl md:text-5xl font-bold text-gray-800 mb-4">
+          Simple, transparent pricing
+        </h1>
+        <p class="text-xl text-gray-600 max-w-2xl mx-auto">
+          Everything you need to streamline your hotel auditing workflow, all in one place.
+          No hidden fees or surprises.
+        </p>
+      </div>
+    </div>
+
+    {/* Main pricing section */}
+    <PricingSection client:load />
+
+    {/* Social proof */}
+    <ScrollingLogos />
+
+    {/* Testimonials */}
+    <TestimonialsSection />
+
+    {/* Call to action */}
+    <CTASection />
+  </div>
+<Footer />
+</Layout>
