@@ -2,7 +2,9 @@
 
 NOTE - A modern, AI-powered platform for streamlining hotel audits and quality assessments.
 
-[Live Preview Here](https://audit-pro.example.com/)
+_SOON_[Live Preview Here](#)
+
+![Audit Pro Preview](./preview.png)
 
 ## Getting Started
 
@@ -10,7 +12,7 @@ To get started with this project, follow these steps:
 
 1. Clone the repository:
 ```bash
-git clone https://github.com/your-username/audit-pro.git
+git clone https://github.com/ctrimm/audit-pro.git
 ```
 
 2. Navigate to the project directory:
