@@ -84,7 +84,7 @@
 
 .marker-underline:hover::after {
   height: 100%;
-  opacity: 0.15;
+  opacity: 0.75;
   transform: translateY(0);
 }
 

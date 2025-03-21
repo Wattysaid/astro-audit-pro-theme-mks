@@ -13,7 +13,7 @@ const HeroSection = () => {
           <div>
             <h1 className="text-3xl md:text-4xl lg:text-5xl font-bold text-gray-800 mb-4">
               The <span className="marker-underline">complete</span>{' '}
-              <span className="marker-underline">hotel audit platform</span>
+              hotel audit platform
             </h1>
             <p className="text-lg text-gray-700 mb-8">
               Discover best-fit hotels, craft winning audit reports, and manage your audits — all in one place.
