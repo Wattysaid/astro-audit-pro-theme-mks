@@ -1,0 +1,150 @@
+---
+import Layout from '../layouts/main.astro';
+import Header from '@/components/layout/Header';
+import Footer from '@/components/layout/Footer';
+import TestimonialCard from '@/components/ui/testimonial-card';
+import CaseStudyCard from '@/components/ui/case-study-card';
+import { Button } from '@/components/ui/button';
+---
+
+<Layout>
+  <Header />
+  <main>
+    {/* Hero Section */}
+    <section class="bg-gradient-to-b from-indigo-50 to-white py-20">
+      <div class="container mx-auto max-w-7xl px-4">
+        <div class="text-center">
+          <h1 class="text-4xl md:text-5xl font-bold text-gray-800 mb-6">
+            What Our Clients Say
+          </h1>
+          <p class="text-xl text-gray-600 max-w-3xl mx-auto">
+            Discover how organizations are transforming their security auditing process with Audit Pro.
+          </p>
+        </div>
+      </div>
+    </section>
+
+    {/* Featured Testimonials */}
+    <section class="py-16">
+      <div class="container mx-auto max-w-7xl px-4">
+        <div class="grid md:grid-cols-3 gap-8">
+          <TestimonialCard
+            quote="The automated compliance checks and real-time monitoring have transformed how we handle security audits."
+            author="Michael Chang"
+            title="Security Director"
+            company="CloudTech Inc"
+          />
+          <TestimonialCard
+            quote="Audit Pro's AI-powered analysis has helped us identify and address security gaps we didn't even know existed."
+            author="Rachel Stevens"
+            title="CISO"
+            company="DataSafe Solutions"
+          />
+          <TestimonialCard
+            quote="The ROI was immediate. We've cut our audit time in half while improving the accuracy of our assessments."
+            author="David Wilson"
+            title="CTO"
+            company="SecureNet Systems"
+          />
+        </div>
+      </div>
+    </section>
+
+    {/* Featured Case Studies */}
+    <section class="py-16 bg-gray-50">
+      <div class="container mx-auto max-w-7xl px-4">
+        <h2 class="text-3xl font-bold text-gray-800 mb-12 text-center">
+          Success Stories
+        </h2>
+        <div class="grid md:grid-cols-3 gap-8">
+          <CaseStudyCard
+            icon="🏢"
+            company="TechCorp Global"
+            industry="Enterprise Technology"
+            description="Achieved 75% reduction in audit completion time while maintaining 100% compliance across 200+ cloud services."
+            metrics={[
+              { value: "75%", label: "Time Saved" },
+              { value: "100%", label: "Compliance Rate" }
+            ]}
+          />
+          <CaseStudyCard
+            icon="🏥"
+            company="HealthTech Solutions"
+            industry="Healthcare Technology"
+            description="Streamlined HIPAA compliance audits across 50+ facilities while improving security posture."
+            metrics={[
+              { value: "50+", label: "Facilities" },
+              { value: "99.9%", label: "Uptime" }
+            ]}
+          />
+          <CaseStudyCard
+            icon="🔒"
+            company="SecureBank Financial"
+            industry="Financial Services"
+            description="Achieved SOC 2 compliance in record time while reducing security audit costs by 60%."
+            metrics={[
+              { value: "60%", label: "Cost Reduction" },
+              { value: "3x", label: "Faster Audits" }
+            ]}
+          />
+        </div>
+      </div>
+    </section>
+
+    {/* Industry Testimonials */}
+    <section class="py-16">
+      <div class="container mx-auto max-w-7xl px-4">
+        <h2 class="text-3xl font-bold text-gray-800 mb-12 text-center">
+          Trusted Across Industries
+        </h2>
+        <div class="grid md:grid-cols-2 gap-8">
+          <TestimonialCard
+            quote="As a financial institution, security is paramount. Audit Pro has streamlined our compliance processes while enhancing our security posture."
+            author="Jennifer Martinez"
+            title="Head of Security"
+            company="Global Finance Corp"
+          />
+          <TestimonialCard
+            quote="The platform's healthcare-specific templates and compliance checks have been invaluable for our HIPAA audits."
+            author="Dr. James Wilson"
+            title="IT Director"
+            company="MedTech Solutions"
+          />
+          <TestimonialCard
+            quote="Managing security audits across our global retail network was a challenge until we found Audit Pro."
+            author="Sarah Thompson"
+            title="Global Security Manager"
+            company="RetailTech Global"
+          />
+          <TestimonialCard
+            quote="The automated vulnerability assessments have dramatically improved our security testing efficiency."
+            author="Alex Chen"
+            title="Security Operations Lead"
+            company="CloudSecure Systems"
+          />
+        </div>
+      </div>
+    </section>
+
+    {/* CTA Section */}
+    <section class="py-16 bg-gradient-to-r from-orange-100 to-blue-100">
+      <div class="container mx-auto max-w-7xl px-4 text-center">
+        <h2 class="text-3xl font-bold text-gray-800 mb-6">
+          Ready to Join Our Success Stories?
+        </h2>
+        <p class="text-xl text-gray-600 mb-8 max-w-3xl mx-auto">
+          Start your journey with Audit Pro today and experience the difference in your security auditing process.
+        </p>
+        <div class="flex justify-center gap-4">
+          <Button size="lg" className="bg-orange-500 hover:bg-orange-600 text-white">
+            Start Free Trial
+          </Button>
+          <Button size="lg" variant="outline">
+            Schedule Demo
+          </Button>
+        </div>
+      </div>
+    </section>
+  </main>
+  <Footer />
+</Layout>

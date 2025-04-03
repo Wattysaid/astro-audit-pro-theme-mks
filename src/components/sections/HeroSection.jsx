@@ -13,10 +13,10 @@ const HeroSection = () => {
           <div>
             <h1 className="text-3xl md:text-4xl lg:text-5xl font-bold text-gray-800 mb-4">
               The <span className="marker-underline">complete</span>{' '}
-              hotel audit platform
+              IT security audit platform
             </h1>
             <p className="text-lg text-gray-700 mb-8">
-              Discover best-fit hotels, craft winning audit reports, and manage your audits — all in one place.
+              Discover organizations needing security assessments, craft winning audit reports, and manage your audits — all in one place.
             </p>
             <Button size="lg" className="bg-orange-500 hover:bg-orange-600 text-white py-6 px-8 rounded-md">
               Try 14 days free
@@ -28,8 +28,8 @@ const HeroSection = () => {
             <div className="bg-blue-50 rounded-lg p-4 mb-4">
               <div className="flex justify-between items-center mb-4">
                 <div>
-                  <p className="text-sm text-gray-600">Marriott Grand Hotel</p>
-                  <p className="text-xs text-gray-500">The Luxury Collection</p>
+                  <p className="text-sm text-gray-600">Enterprise Solutions Inc.</p>
+                  <p className="text-xs text-gray-500">Fortune 500 Technology</p>
                 </div>
                 <p className="text-lg font-bold text-black">$50,000</p>
               </div>

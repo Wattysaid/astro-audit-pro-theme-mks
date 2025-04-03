@@ -10,6 +10,7 @@ import ProposalSection from './sections/ProposalSection';
 import TestimonialsSection from './sections/TestimonialsSection';
 import FundersSection from './sections/FundersSection';
 import CTASection from './sections/CTASection';
+import PricingCallout from './sections/PricingCallout';
 
 const AuditProApp = () => {
   return (
@@ -25,6 +26,7 @@ const AuditProApp = () => {
         <ProposalSection />
         <TestimonialsSection />
         <FundersSection />
+        <PricingCallout />
         <CTASection />
       </main>
       

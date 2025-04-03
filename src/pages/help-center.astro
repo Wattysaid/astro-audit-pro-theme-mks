@@ -1,0 +1,160 @@
+---
+import Layout from '../layouts/main.astro';
+import Header from '@/components/layout/Header';
+import Footer from '@/components/layout/Footer';
+import { Button } from '@/components/ui/button';
+---
+
+<Layout>
+  <Header />
+  <main>
+    {/* Hero Section */}
+    <section class="bg-gradient-to-b from-indigo-50 to-white py-20">
+      <div class="container mx-auto max-w-7xl px-4">
+        <div class="text-center">
+          <h1 class="text-4xl md:text-5xl font-bold text-gray-800 mb-6">
+            How Can We Help?
+          </h1>
+          <div class="max-w-2xl mx-auto">
+            <div class="relative">
+              <input
+                type="text"
+                placeholder="Search for help articles..."
+                class="w-full px-6 py-4 rounded-xl border border-gray-200 focus:outline-none focus:ring-2 focus:ring-blue-500 text-lg"
+              />
+              <button class="absolute right-4 top-1/2 -translate-y-1/2">
+                <svg class="w-6 h-6 text-gray-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z" />
+                </svg>
+              </button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    {/* Quick Links */}
+    <section class="py-16">
+      <div class="container mx-auto max-w-7xl px-4">
+        <div class="grid md:grid-cols-4 gap-8">
+          <a href="#getting-started" class="bg-white rounded-xl p-6 shadow-sm hover:shadow-md transition-shadow">
+            <div class="w-12 h-12 bg-blue-100 rounded-lg flex items-center justify-center text-2xl mb-4">
+              🚀
+            </div>
+            <h3 class="text-xl font-bold text-gray-800 mb-2">Getting Started</h3>
+            <p class="text-gray-600">New to Audit Pro? Start here for the basics.</p>
+          </a>
+
+          <a href="#user-guides" class="bg-white rounded-xl p-6 shadow-sm hover:shadow-md transition-shadow">
+            <div class="w-12 h-12 bg-green-100 rounded-lg flex items-center justify-center text-2xl mb-4">
+              📚
+            </div>
+            <h3 class="text-xl font-bold text-gray-800 mb-2">User Guides</h3>
+            <p class="text-gray-600">Detailed guides for all features and tools.</p>
+          </a>
+
+          <a href="#api-docs" class="bg-white rounded-xl p-6 shadow-sm hover:shadow-md transition-shadow">
+            <div class="w-12 h-12 bg-purple-100 rounded-lg flex items-center justify-center text-2xl mb-4">
+              🔧
+            </div>
+            <h3 class="text-xl font-bold text-gray-800 mb-2">API Documentation</h3>
+            <p class="text-gray-600">Technical docs for API integration.</p>
+          </a>
+
+          <a href="#troubleshooting" class="bg-white rounded-xl p-6 shadow-sm hover:shadow-md transition-shadow">
+            <div class="w-12 h-12 bg-orange-100 rounded-lg flex items-center justify-center text-2xl mb-4">
+              🔍
+            </div>
+            <h3 class="text-xl font-bold text-gray-800 mb-2">Troubleshooting</h3>
+            <p class="text-gray-600">Solutions to common issues and FAQs.</p>
+          </a>
+        </div>
+      </div>
+    </section>
+
+    {/* Popular Articles */}
+    <section class="py-16 bg-gray-50">
+      <div class="container mx-auto max-w-7xl px-4">
+        <h2 class="text-3xl font-bold text-gray-800 mb-12">Popular Articles</h2>
+        <div class="grid md:grid-cols-2 gap-8">
+          <div class="bg-white rounded-xl p-6 shadow-sm">
+            <h3 class="text-xl font-bold text-gray-800 mb-4">Getting Started with Security Audits</h3>
+            <p class="text-gray-600 mb-4">Learn the basics of setting up and conducting your first security audit with Audit Pro.</p>
+            <a href="/best-practices" class="text-blue-600 hover:text-blue-700 font-medium">Read More →</a>
+          </div>
+
+          <div class="bg-white rounded-xl p-6 shadow-sm">
+            <h3 class="text-xl font-bold text-gray-800 mb-4">Compliance Templates Guide</h3>
+            <p class="text-gray-600 mb-4">How to use and customize our pre-built compliance templates for various standards.</p>
+            <a href="/ebooks" class="text-blue-600 hover:text-blue-700 font-medium">Read More →</a>
+          </div>
+
+          <div class="bg-white rounded-xl p-6 shadow-sm">
+            <h3 class="text-xl font-bold text-gray-800 mb-4">Advanced Reporting Features</h3>
+            <p class="text-gray-600 mb-4">Deep dive into our advanced reporting capabilities and customization options.</p>
+            <a href="/blog" class="text-blue-600 hover:text-blue-700 font-medium">Read More →</a>
+          </div>
+
+          <div class="bg-white rounded-xl p-6 shadow-sm">
+            <h3 class="text-xl font-bold text-gray-800 mb-4">Team Collaboration Best Practices</h3>
+            <p class="text-gray-600 mb-4">Tips and tricks for effective team collaboration during security audits.</p>
+            <a href="/best-practices#team-collaboration" class="text-blue-600 hover:text-blue-700 font-medium">Read More →</a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    {/* Video Tutorials */}
+    <section class="py-16">
+      <div class="container mx-auto max-w-7xl px-4">
+        <h2 class="text-3xl font-bold text-gray-800 mb-12">Video Tutorials</h2>
+        <div class="grid md:grid-cols-3 gap-8">
+          <div class="bg-white rounded-xl overflow-hidden shadow-sm">
+            <div class="aspect-video bg-gray-100"></div>
+            <div class="p-6">
+              <h3 class="text-xl font-bold text-gray-800 mb-2">Quick Start Guide</h3>
+              <p class="text-gray-600">Get up and running with Audit Pro in under 10 minutes.</p>
+            </div>
+          </div>
+
+          <div class="bg-white rounded-xl overflow-hidden shadow-sm">
+            <div class="aspect-video bg-gray-100"></div>
+            <div class="p-6">
+              <h3 class="text-xl font-bold text-gray-800 mb-2">Advanced Features</h3>
+              <p class="text-gray-600">Deep dive into our advanced security auditing features.</p>
+            </div>
+          </div>
+
+          <div class="bg-white rounded-xl overflow-hidden shadow-sm">
+            <div class="aspect-video bg-gray-100"></div>
+            <div class="p-6">
+              <h3 class="text-xl font-bold text-gray-800 mb-2">Compliance Tools</h3>
+              <p class="text-gray-600">Learn how to use our compliance automation tools.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    {/* Contact Support */}
+    <section class="py-16 bg-gradient-to-r from-orange-100 to-blue-100">
+      <div class="container mx-auto max-w-7xl px-4 text-center">
+        <h2 class="text-3xl font-bold text-gray-800 mb-6">
+          Need More Help?
+        </h2>
+        <p class="text-xl text-gray-600 mb-8 max-w-3xl mx-auto">
+          Our support team is available 24/7 to help you with any questions or issues.
+        </p>
+        <div class="flex justify-center gap-4">
+          <Button size="lg" className="bg-orange-500 hover:bg-orange-600 text-white">
+            <a href="/faq">Visit FAQ</a>
+          </Button>
+          <Button size="lg" variant="outline">
+            <a href="/newsletter">Subscribe to Updates</a>
+          </Button>
+        </div>
+      </div>
+    </section>
+  </main>
+  <Footer />
+</Layout>

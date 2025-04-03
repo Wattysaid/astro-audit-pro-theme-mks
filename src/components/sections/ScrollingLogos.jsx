@@ -2,15 +2,15 @@ import React from 'react';
 
 const ScrollingLogos = () => {
   const logos = [
-    "Hilton", "Marriott", "Hyatt", "Four Seasons", "Ritz Carlton", 
-    "Sheraton", "Holiday Inn", "Best Western", "Westin", "Wyndham"
+    "Microsoft", "Amazon", "Google", "IBM", "Oracle", 
+    "Salesforce", "Adobe", "Intel", "Cisco", "VMware"
   ];
   
   return (
     <div className="py-12 bg-white">
       <div className="container mx-auto max-w-7xl">
         <h2 className="text-2xl font-semibold text-center text-gray-800 mb-10">
-          Trusted by over 4,000 hotels
+          Trusted by over 4,000 organizations
         </h2>
         
         <div className="relative overflow-hidden">

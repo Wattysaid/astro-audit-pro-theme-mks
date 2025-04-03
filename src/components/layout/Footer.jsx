@@ -18,32 +18,32 @@ const Footer = () => {
           <div>
             <h3 className="text-lg font-medium text-gray-800 mb-4">Platform</h3>
             <ul className="space-y-3">
-              <li><a href="#" className="text-gray-600 hover:text-gray-900">Pricing</a></li>
-              <li><a href="#" className="text-gray-600 hover:text-gray-900">Explore Hotels</a></li>
-              <li><a href="#" className="text-gray-600 hover:text-gray-900">Explore Chains</a></li>
-              <li><a href="#" className="text-gray-600 hover:text-gray-900">Best Practices</a></li>
-              <li><a href="#" className="text-gray-600 hover:text-gray-900">Help Center</a></li>
+              <li><a href="/pricing" className="text-gray-600 hover:text-gray-900">Pricing</a></li>
+              <li><a href="/explore-organizations" className="text-gray-600 hover:text-gray-900">Explore Organizations</a></li>
+              <li><a href="/explore-industries" className="text-gray-600 hover:text-gray-900">Explore Industries</a></li>
+              <li><a href="/best-practices" className="text-gray-600 hover:text-gray-900">Best Practices</a></li>
+              <li><a href="/help-center" className="text-gray-600 hover:text-gray-900">Help Center</a></li>
             </ul>
           </div>
           
           <div>
             <h3 className="text-lg font-medium text-gray-800 mb-4">Why Audit Pro</h3>
             <ul className="space-y-3">
-              <li><a href="#" className="text-gray-600 hover:text-gray-900">How We're Different</a></li>
-              <li><a href="#" className="text-gray-600 hover:text-gray-900">Success Stories</a></li>
-              <li><a href="#" className="text-gray-600 hover:text-gray-900">Testimonials</a></li>
-              <li><a href="#" className="text-gray-600 hover:text-gray-900">FAQ</a></li>
+              <li><a href="/why-different" className="text-gray-600 hover:text-gray-900">How We're Different</a></li>
+              <li><a href="/success-stories" className="text-gray-600 hover:text-gray-900">Success Stories</a></li>
+              <li><a href="/testimonials" className="text-gray-600 hover:text-gray-900">Testimonials</a></li>
+              <li><a href="/faq" className="text-gray-600 hover:text-gray-900">FAQ</a></li>
             </ul>
           </div>
           
           <div>
             <h3 className="text-lg font-medium text-gray-800 mb-4">Resources</h3>
             <ul className="space-y-3">
-              <li><a href="#" className="text-gray-600 hover:text-gray-900">Blog</a></li>
-              <li><a href="#" className="text-gray-600 hover:text-gray-900">Ebooks</a></li>
-              <li><a href="#" className="text-gray-600 hover:text-gray-900">Newsletter</a></li>
-              <li><a href="#" className="text-gray-600 hover:text-gray-900">About Us</a></li>
-              <li><a href="#" className="text-gray-600 hover:text-gray-900">Careers</a></li>
+              <li><a href="/blog" className="text-gray-600 hover:text-gray-900">Blog</a></li>
+              <li><a href="/ebooks" className="text-gray-600 hover:text-gray-900">Ebooks</a></li>
+              <li><a href="/newsletter" className="text-gray-600 hover:text-gray-900">Newsletter</a></li>
+              <li><a href="/about" className="text-gray-600 hover:text-gray-900">About Us</a></li>
+              <li><a href="/careers" className="text-gray-600 hover:text-gray-900">Careers</a></li>
             </ul>
           </div>
         </div>

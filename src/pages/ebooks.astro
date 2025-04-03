@@ -1,0 +1,218 @@
+---
+import Layout from '../layouts/main.astro';
+import Header from '@/components/layout/Header';
+import Footer from '@/components/layout/Footer';
+import ResourceCard from '@/components/ui/resource-card';
+import { Button } from '@/components/ui/button';
+---
+
+<Layout>
+  <Header />
+  <main>
+    {/* Hero Section */}
+    <section class="bg-gradient-to-b from-indigo-50 to-white py-20">
+      <div class="container mx-auto max-w-7xl px-4">
+        <div class="text-center">
+          <h1 class="text-4xl md:text-5xl font-bold text-gray-800 mb-6">
+            Security Audit Resources
+          </h1>
+          <p class="text-xl text-gray-600 max-w-3xl mx-auto">
+            Comprehensive guides and resources to enhance your security auditing knowledge and capabilities.
+          </p>
+        </div>
+      </div>
+    </section>
+
+    {/* Featured Ebooks */}
+    <section class="py-16">
+      <div class="container mx-auto max-w-7xl px-4">
+        <h2 class="text-3xl font-bold text-gray-800 mb-12">Featured Resources</h2>
+        <div class="grid md:grid-cols-2 gap-8">
+          <ResourceCard
+            title="The Complete Guide to IT Security Auditing"
+            description="A comprehensive guide covering all aspects of modern IT security auditing, from planning to execution and reporting."
+            image="/placeholder-1.jpg"
+            author="Security Audit Team"
+            date="2025 Edition"
+            readTime="2 hours"
+            category="Comprehensive Guide"
+            tags={["Security", "Auditing", "Best Practices"]}
+            type="ebook"
+            downloadUrl="#"
+          />
+          <ResourceCard
+            title="Security Compliance Framework Templates"
+            description="Ready-to-use templates for major compliance frameworks including ISO 27001, SOC 2, and HIPAA."
+            image="/placeholder-2.jpg"
+            author="Compliance Experts"
+            date="2025 Edition"
+            readTime="1.5 hours"
+            category="Templates"
+            tags={["Compliance", "Templates", "Frameworks"]}
+            type="ebook"
+            downloadUrl="#"
+          />
+        </div>
+      </div>
+    </section>
+
+    {/* Resource Categories */}
+    <section class="py-16 bg-gray-50">
+      <div class="container mx-auto max-w-7xl px-4">
+        <div class="grid md:grid-cols-3 gap-8">
+          <ResourceCard
+            title="Cloud Security Audit Playbook"
+            description="Step-by-step guide for conducting thorough security audits in cloud environments."
+            image="/placeholder-3.jpg"
+            author="Cloud Security Team"
+            date="2025 Edition"
+            readTime="45 min"
+            category="Cloud Security"
+            tags={["Cloud", "AWS", "Azure", "GCP"]}
+            type="ebook"
+            downloadUrl="#"
+          />
+          <ResourceCard
+            title="GDPR Compliance Guide"
+            description="Complete guide to achieving and maintaining GDPR compliance in your security audits."
+            image="/placeholder-4.jpg"
+            author="Privacy Team"
+            date="2025 Edition"
+            readTime="1 hour"
+            category="Compliance"
+            tags={["GDPR", "Privacy", "EU"]}
+            type="ebook"
+            downloadUrl="#"
+          />
+          <ResourceCard
+            title="Security Testing Automation"
+            description="Guide to implementing automated security testing in your audit processes."
+            image="/placeholder-5.jpg"
+            author="Automation Team"
+            date="2025 Edition"
+            readTime="30 min"
+            category="Automation"
+            tags={["Automation", "Testing", "Tools"]}
+            type="ebook"
+            downloadUrl="#"
+          />
+        </div>
+      </div>
+    </section>
+
+    {/* Resource Bundles */}
+    <section class="py-16">
+      <div class="container mx-auto max-w-7xl px-4">
+        <h2 class="text-3xl font-bold text-gray-800 mb-12">Resource Bundles</h2>
+        <div class="grid md:grid-cols-2 gap-8">
+          <div class="bg-white rounded-xl p-8 shadow-lg border border-gray-100">
+            <div class="flex items-center gap-4 mb-6">
+              <div class="w-16 h-16 bg-blue-100 rounded-xl flex items-center justify-center text-3xl">
+                📚
+              </div>
+              <div>
+                <h3 class="text-2xl font-bold text-gray-800">Starter Bundle</h3>
+                <p class="text-gray-600">Essential resources for beginners</p>
+              </div>
+            </div>
+            <ul class="space-y-3 mb-6">
+              <li class="flex items-center gap-2">
+                <svg class="w-5 h-5 text-green-500" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7" />
+                </svg>
+                <span>Security Audit Basics Guide</span>
+              </li>
+              <li class="flex items-center gap-2">
+                <svg class="w-5 h-5 text-green-500" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7" />
+                </svg>
+                <span>Compliance Checklist Templates</span>
+              </li>
+              <li class="flex items-center gap-2">
+                <svg class="w-5 h-5 text-green-500" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7" />
+                </svg>
+                <span>Risk Assessment Guide</span>
+              </li>
+            </ul>
+            <div class="space-y-4">
+              <Button className="w-full bg-blue-600 hover:bg-blue-700 text-white">Download Bundle</Button>
+              <p class="text-sm text-gray-600 text-center">
+                Also check our <a href="/best-practices" class="text-blue-600 hover:text-blue-700">Best Practices</a> and 
+                <a href="/help-center" class="text-blue-600 hover:text-blue-700"> Help Center</a> for more resources
+              </p>
+            </div>
+          </div>
+
+          <div class="bg-white rounded-xl p-8 shadow-lg border border-gray-100">
+            <div class="flex items-center gap-4 mb-6">
+              <div class="w-16 h-16 bg-purple-100 rounded-xl flex items-center justify-center text-3xl">
+                🚀
+              </div>
+              <div>
+                <h3 class="text-2xl font-bold text-gray-800">Advanced Bundle</h3>
+                <p class="text-gray-600">Complete resource collection</p>
+              </div>
+            </div>
+            <ul class="space-y-3 mb-6">
+              <li class="flex items-center gap-2">
+                <svg class="w-5 h-5 text-green-500" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7" />
+                </svg>
+                <span>All Starter Bundle Resources</span>
+              </li>
+              <li class="flex items-center gap-2">
+                <svg class="w-5 h-5 text-green-500" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7" />
+                </svg>
+                <span>Advanced Security Testing Guide</span>
+              </li>
+              <li class="flex items-center gap-2">
+                <svg class="w-5 h-5 text-green-500" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7" />
+                </svg>
+                <span>Automation Playbooks</span>
+              </li>
+              <li class="flex items-center gap-2">
+                <svg class="w-5 h-5 text-green-500" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7" />
+                </svg>
+                <span>Enterprise Security Templates</span>
+              </li>
+            </ul>
+            <div class="space-y-4">
+              <Button className="w-full bg-purple-600 hover:bg-purple-700 text-white">Download Bundle</Button>
+              <p class="text-sm text-gray-600 text-center">
+                Learn more in our <a href="/explore-industries" class="text-blue-600 hover:text-blue-700">Industry Guides</a> and 
+                <a href="/blog" class="text-blue-600 hover:text-blue-700"> Blog</a>
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    {/* Newsletter */}
+    <section class="py-16 bg-gradient-to-r from-orange-100 to-blue-100">
+      <div class="container mx-auto max-w-7xl px-4 text-center">
+        <h2 class="text-3xl font-bold text-gray-800 mb-6">
+          Get New Resources First
+        </h2>
+        <p class="text-xl text-gray-600 mb-8 max-w-3xl mx-auto">
+          Subscribe to receive notifications when we release new security audit resources and guides.
+        </p>
+        <div class="max-w-xl mx-auto flex gap-4">
+          <input
+            type="email"
+            placeholder="Enter your email"
+            class="flex-1 px-6 py-3 rounded-lg border border-gray-200 focus:outline-none focus:ring-2 focus:ring-blue-500"
+          />
+          <Button size="lg" className="bg-orange-500 hover:bg-orange-600 text-white">
+            <a href="/newsletter" class="text-white">Subscribe to Updates</a>
+          </Button>
+        </div>
+      </div>
+    </section>
+  </main>
+  <Footer />
+</Layout>

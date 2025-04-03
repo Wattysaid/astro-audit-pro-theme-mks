@@ -6,22 +6,22 @@ import { Star } from 'lucide-react';
 const TestimonialsSection = () => {
   const testimonials = [
     {
-      quote: "Audit Pro is a one-stop shop where I can research and track hotels all in one place.",
-      name: "Beth Kander-Dauphin",
-      title: "Chief Strategist Officer",
-      company: "Goldring/Woldenberg Institute of Southern Jewish Life"
+      quote: "Audit Pro is a one-stop shop where I can research and track organizations' security needs all in one place.",
+      name: "Sarah Chen",
+      title: "Chief Information Security Officer",
+      company: "TechSecure Solutions"
     },
     {
-      quote: "Audit Pro has fundamentally changed the way we work, especially finding accommodations that really fit us.",
+      quote: "Audit Pro has fundamentally changed the way we work, especially finding organizations that match our security expertise.",
       name: "Theresa Anderson",
-      title: "Director of Development",
-      company: "Salesian Sisters of Tampa, Inc."
+      title: "Security Audit Director",
+      company: "CyberGuard Consulting"
     },
     {
-      quote: "Audit Pro is an all-year round platform we can track on a year-on-year basis. We got history in there, we got documents in there. It just makes everything easier.",
+      quote: "Audit Pro is an all-year round platform where we can track security assessments and compliance history. The documentation and reporting features make everything easier.",
       name: "Beth Noble",
-      title: "Senior Audit Administrator",
-      company: "Phoenix Children's Foundation"
+      title: "Senior Security Auditor",
+      company: "SecureNet Systems"
     }
   ];
   

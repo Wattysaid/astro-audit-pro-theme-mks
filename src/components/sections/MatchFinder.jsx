@@ -5,7 +5,7 @@ const MatchFinder = () => {
   const mockups = [
     {
       id: 1,
-      title: "Hotel Search"
+      title: "Organization Search"
     },
     {
       id: 2,
@@ -33,12 +33,12 @@ const MatchFinder = () => {
         <div className="grid grid-cols-1 md:grid-cols-3 gap-16">
           <div className="md:col-span-1">
             <h2 className="text-3xl font-bold text-gray-800 mb-4">
-              Find Best-Fit Hotels In{' '}
+              Find Best-Fit Organizations In{' '}
               <span className="marker-underline">Seconds</span>, Not Weeks
             </h2>
             
             <p className="text-lg text-gray-700 mb-6">
-              Discover relevant auditing opportunities instantly, explore over 20,000 expert-curated hotels, and find best-fit audits from a database of over 400,000. See who is supporting your peers with Peer Prospecting.
+              Discover relevant security auditing opportunities instantly, explore over 20,000 expert-curated organizations, and find best-fit audits from a database of over 400,000. See who is supporting your peers with Peer Prospecting.
             </p>
           </div>
           
@@ -63,19 +63,19 @@ const MatchFinder = () => {
                         <div className="h-8 bg-white rounded border border-gray-200"></div>
                       </div>
                       <div className="space-y-2">
-                        <p className="text-sm font-medium text-gray-600">Hotel Type</p>
+                        <p className="text-sm font-medium text-gray-600">Organization Type</p>
                         <div className="space-y-2">
                           <div className="flex items-center">
                             <div className="w-4 h-4 rounded bg-blue-500 mr-2"></div>
-                            <p className="text-sm text-gray-700">Luxury</p>
+                            <p className="text-sm text-gray-700">Enterprise</p>
                           </div>
                           <div className="flex items-center">
                             <div className="w-4 h-4 rounded bg-gray-200 mr-2"></div>
-                            <p className="text-sm text-gray-700">Business</p>
+                            <p className="text-sm text-gray-700">SMB</p>
                           </div>
                           <div className="flex items-center">
                             <div className="w-4 h-4 rounded bg-gray-200 mr-2"></div>
-                            <p className="text-sm text-gray-700">Resort</p>
+                            <p className="text-sm text-gray-700">Startup</p>
                           </div>
                         </div>
                       </div>
@@ -97,11 +97,11 @@ const MatchFinder = () => {
                         <div className="flex justify-between items-center">
                           <div className="flex items-center space-x-3">
                             <div className="w-12 h-12 bg-white rounded-lg flex items-center justify-center shadow-sm">
-                              🏨
+                              🔒
                             </div>
                             <div>
                               <div className="flex items-center">
-                                <p className="font-medium">Grand Luxury Hotel</p>
+                                <p className="font-medium">Global Tech Solutions</p>
                                 <span className="ml-2 px-2 py-1 bg-green-100 text-green-700 text-xs rounded-full">98% match</span>
                               </div>
                               <p className="text-sm text-gray-600">New York, NY • $75,000</p>
@@ -121,7 +121,7 @@ const MatchFinder = () => {
                             </div>
                             <div>
                               <div className="flex items-center">
-                                <p className="font-medium">Seaside Resort & Spa</p>
+                                <p className="font-medium">FinTech Innovations Ltd</p>
                                 <span className="ml-2 px-2 py-1 bg-blue-100 text-blue-700 text-xs rounded-full">85% match</span>
                               </div>
                               <p className="text-sm text-gray-600">Miami, FL • $45,000</p>
@@ -175,7 +175,7 @@ const MatchFinder = () => {
                               ✓
                             </div>
                             <div>
-                              <p className="text-sm font-medium">Plaza Hotel</p>
+                              <p className="text-sm font-medium">Enterprise Systems Inc</p>
                               <p className="text-xs text-gray-500">Completed Dec 2024</p>
                             </div>
                           </div>
@@ -184,7 +184,7 @@ const MatchFinder = () => {
                               ✓
                             </div>
                             <div>
-                              <p className="text-sm font-medium">Royal Gardens</p>
+                              <p className="text-sm font-medium">Cloud Security Corp</p>
                               <p className="text-xs text-gray-500">Completed Nov 2024</p>
                             </div>
                           </div>
@@ -214,7 +214,7 @@ const MatchFinder = () => {
                             💬
                           </div>
                           <div>
-                            <p className="font-medium">Contact Hotel</p>
+                            <p className="font-medium">Contact Organization</p>
                             <p className="text-sm text-gray-600">Usually responds in 2h</p>
                           </div>
                         </div>

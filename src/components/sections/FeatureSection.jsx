@@ -4,7 +4,7 @@ const FeatureSection = () => {
   const mockups = [
     {
       id: 1,
-      title: "Find hotels to audit"
+      title: "Find organizations to audit"
     },
     {
       id: 2,
@@ -37,7 +37,7 @@ const FeatureSection = () => {
             Powerful Features for Modern Auditing
           </h2>
           <p className="text-xl text-gray-600 max-w-2xl mx-auto">
-            Everything you need to streamline your hotel auditing workflow, all in one place.
+            Everything you need to streamline your IT security auditing workflow, all in one place.
           </p>
         </div>
         <div className="grid grid-cols-1 md:grid-cols-3 gap-16 items-center">
@@ -67,7 +67,7 @@ const FeatureSection = () => {
                             <div className="bg-gradient-to-br from-blue-50 to-blue-100 rounded-lg p-6 flex items-center justify-center transform hover:scale-105 transition-transform">
                               <div className="text-center">
                                 <div className="text-4xl font-bold text-blue-600 mb-3 animate-pulse">150+</div>
-                                <p className="text-sm font-medium text-gray-700">Available Hotels</p>
+                                <p className="text-sm font-medium text-gray-700">Available Organizations</p>
                                 <p className="text-xs text-gray-500 mt-1">Updated daily</p>
                               </div>
                             </div>
@@ -86,10 +86,10 @@ const FeatureSection = () => {
                               <div className="flex items-center justify-between">
                                 <div className="flex items-center space-x-3">
                                   <div className="w-10 h-10 bg-blue-100 rounded-full flex items-center justify-center">
-                                    🏨
+                                    🔒
                                   </div>
                                   <div>
-                                    <p className="font-medium">Luxury Resort</p>
+                                    <p className="font-medium">Enterprise Tech Corp</p>
                                     <p className="text-sm text-gray-500">Available Now</p>
                                   </div>
                                 </div>
@@ -103,7 +103,7 @@ const FeatureSection = () => {
                                     🌟
                                   </div>
                                   <div>
-                                    <p className="font-medium">Beach Resort</p>
+                                    <p className="font-medium">Financial Services Inc</p>
                                     <p className="text-sm text-gray-500">Premium</p>
                                   </div>
                                 </div>
@@ -169,7 +169,7 @@ const FeatureSection = () => {
               You Can Do It All With <span className="bg-gradient-to-r from-blue-600 to-indigo-600 text-transparent bg-clip-text">Audit Pro</span>
             </h2>
             <p className="text-xl text-gray-600 mb-10">
-              Experience the future of hotel auditing with Audit Pro.
+              Experience the future of IT security auditing with Audit Pro.
             </p>
             
             <div className="space-y-6">
@@ -178,8 +178,8 @@ const FeatureSection = () => {
                   🔍
                 </div>
                 <div className="flex-1">
-                  <h3 className="text-lg font-semibold">Find hotels to audit</h3>
-                  <p className="text-gray-600">Access our database of hotels looking for quality audits.</p>
+                  <h3 className="text-lg font-semibold">Find organizations to audit</h3>
+                  <p className="text-gray-600">Access our database of organizations looking for security assessments.</p>
                 </div>
               </div>
               
@@ -189,7 +189,7 @@ const FeatureSection = () => {
                 </div>
                 <div className="flex-1">
                   <h3 className="text-lg font-semibold">Apply for opportunities</h3>
-                  <p className="text-gray-600">Submit applications to audit hotels that match your expertise.</p>
+                  <p className="text-gray-600">Submit applications to audit organizations that match your security expertise.</p>
                 </div>
               </div>
               

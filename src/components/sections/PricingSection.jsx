@@ -3,9 +3,9 @@ import { Button } from '@/components/ui/button';
 
 const PricingSection = () => {
   const features = [
-    "Unlimited hotel audits",
-    "AI-powered report writing",
-    "Smart hotel matching",
+    "Unlimited security audits",
+    "AI-powered security report writing",
+    "Smart organization matching",
     "Real-time collaboration",
     "Custom templates",
     "Priority support",
@@ -89,7 +89,7 @@ const PricingSection = () => {
                   <svg className="w-5 h-5 text-green-500 mt-1 mr-3" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                     <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M5 13l4 4L19 7" />
                   </svg>
-                  <p className="text-gray-600">Smart hotel matching and recommendations</p>
+                  <p className="text-gray-600">Smart organization matching and security recommendations</p>
                 </li>
               </ul>
             </div>
