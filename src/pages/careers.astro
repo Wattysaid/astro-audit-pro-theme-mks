@@ -4,9 +4,17 @@ import Header from '@/components/layout/Header';
 import Footer from '@/components/layout/Footer';
 import JobCard from '@/components/ui/job-card';
 import { Button } from '@/components/ui/button';
+
+// SEO metadata specific to careers page
+const seo = {
+	title: "Careers at Audit Pro | Security & Compliance Jobs",
+	description: "Join Audit Pro and help shape the future of security auditing. We offer competitive benefits, remote work options, and roles in engineering, security, and product. Current openings for Senior Security Engineer, Compliance Specialist, and more.",
+	image: "/og-image.png",
+	canonicalURL: Astro.site + Astro.url.pathname,
+};
 ---
 
-<Layout>
+<Layout {...seo}>
   <Header />
   <main>
     {/* Hero Section */}

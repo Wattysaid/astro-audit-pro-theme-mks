@@ -1,8 +1,8 @@
-# Audit Pro - Modern Hotel Auditing Platform
+# Audit Pro - Modern IT Security Auditing Platform
 
-NOTE - A modern, AI-powered platform for streamlining hotel audits and quality assessments.
+A professional Astro 5 theme built with React, TypeScript, and Tailwind CSS that transforms security auditing with AI-powered assessment tools, automated compliance checks, and comprehensive quality management workflows.
 
-_SOON_[Live Preview Here](#)
+[**_SOON:_** Live Preview Here](#)
 
 ![Audit Pro Preview](./preview.png)
 

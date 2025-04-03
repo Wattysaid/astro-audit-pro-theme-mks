@@ -4,9 +4,17 @@ import Header from '@/components/layout/Header';
 import Footer from '@/components/layout/Footer';
 import PracticeCard from '@/components/ui/practice-card';
 import { Button } from '@/components/ui/button';
+
+// SEO metadata specific to best practices page
+const seo = {
+	title: "Security Audit Best Practices & Implementation Guide",
+	description: "Learn essential security audit practices, from basic planning to advanced penetration testing. Industry-specific guides for healthcare, finance, and cloud security compliance.",
+	image: "/og-image.png",
+	canonicalURL: Astro.site + Astro.url.pathname,
+};
 ---
 
-<Layout>
+<Layout {...seo}>
   <Header />
   <main>
     {/* Hero Section */}

@@ -3,9 +3,17 @@ import Layout from '../layouts/main.astro';
 import Header from '@/components/layout/Header';
 import Footer from '@/components/layout/Footer';
 import { Button } from '@/components/ui/button';
+
+// SEO metadata specific to success stories page
+const seo = {
+	title: "Customer Success Stories | Audit Pro Security Platform",
+	description: "See how organizations achieve 75% faster audits, 100% compliance rates, and $2M+ annual savings with Audit Pro. Real success stories from TechCorp, SecureBank, HealthTech, and more.",
+	image: "/og-image.png",
+	canonicalURL: Astro.site + Astro.url.pathname,
+};
 ---
 
-<Layout>
+<Layout {...seo}>
   <Header />
   <main>
     {/* Hero Section */}

@@ -3,9 +3,17 @@ import Layout from '../layouts/main.astro';
 import Header from '@/components/layout/Header';
 import Footer from '@/components/layout/Footer';
 import { Button } from '@/components/ui/button';
+
+// SEO metadata specific to why-different page
+const seo = {
+	title: "Why Choose Audit Pro | AI-Powered Security Auditing Platform",
+	description: "Discover what sets Audit Pro apart: AI-powered security analysis, real-time collaboration, automated reporting, and seamless integration with your existing tools. Compare our innovative features with traditional solutions.",
+	image: "/og-image.png",
+	canonicalURL: Astro.site + Astro.url.pathname,
+};
 ---
 
-<Layout>
+<Layout {...seo}>
   <Header />
   <main>
     {/* Hero Section */}

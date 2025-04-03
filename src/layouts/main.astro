@@ -1,6 +1,17 @@
 ---
 import '../styles/global.css';
 const { content } = Astro.props;
+
+// Default SEO values
+const {
+	title = "Audit Pro - Modern Security Auditing Platform",
+	description = "Professional security auditing platform with AI-powered assessment tools, automated compliance checks, and quality management workflows. Built with Astro, React, and TypeScript.",
+	image = "/og-image.png",
+	canonicalURL = new URL(Astro.url.pathname, Astro.site),
+} = Astro.props;
+
+// Keywords relevant to the platform
+const keywords = "security auditing, compliance management, AI assessment tools, quality management, security platform, automated audits, IT security, compliance checks, audit workflow, security assessment";
 ---
 
 <html lang="en">
@@ -8,7 +19,36 @@ const { content } = Astro.props;
 		<meta charset="utf-8" />
 		<meta name="viewport" content="width=device-width" />
 		<link rel="icon" type="image/svg+xml" href="/favicon.svg" />
-		<title>Audit Pro</title>
+		
+		<!-- Primary Meta Tags -->
+		<title>{title}</title>
+		<meta name="title" content={title} />
+		<meta name="description" content={description} />
+		<meta name="keywords" content={keywords} />
+		<link rel="canonical" href={canonicalURL} />
+		
+		<!-- Open Graph / Facebook -->
+		<meta property="og:type" content="website" />
+		<meta property="og:url" content={canonicalURL} />
+		<meta property="og:title" content={title} />
+		<meta property="og:description" content={description} />
+		<meta property="og:image" content={image} />
+		
+		<!-- Twitter -->
+		<meta property="twitter:card" content="summary_large_image" />
+		<meta property="twitter:url" content={canonicalURL} />
+		<meta property="twitter:title" content={title} />
+		<meta property="twitter:description" content={description} />
+		<meta property="twitter:image" content={image} />
+		
+		<!-- Additional Meta Tags -->
+		<meta name="robots" content="index, follow" />
+		<meta name="theme-color" content="#0F172A" />
+		<meta name="generator" content={Astro.generator} />
+		
+		<!-- Preconnect to common domains -->
+		<link rel="preconnect" href="https://fonts.googleapis.com" />
+		<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
 	</head>
 	<body>
 		<slot />

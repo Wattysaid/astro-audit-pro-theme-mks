@@ -6,9 +6,17 @@ import ScrollingLogos from '../components/sections/ScrollingLogos';
 import TestimonialsSection from '../components/sections/TestimonialsSection';
 import CTASection from '../components/sections/CTASection';
 import Footer from '@/components/layout/Footer';
+
+// SEO metadata specific to pricing page
+const seo = {
+	title: "Pricing - Audit Pro | Transparent Security Auditing Plans",
+	description: "Choose from our flexible, transparent pricing plans for IT security auditing. From startups to enterprises, get AI-powered assessment tools, automated compliance checks, and expert support.",
+	image: "/og-image.png",
+	canonicalURL: Astro.site + Astro.url.pathname,
+};
 ---
 
-<Layout>
+<Layout {...seo}>
   <Header />
   {/* Hero section specific to pricing */}
   <div class="min-h-screen">

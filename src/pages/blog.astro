@@ -4,9 +4,17 @@ import Header from '@/components/layout/Header';
 import Footer from '@/components/layout/Footer';
 import ResourceCard from '@/components/ui/resource-card';
 import { Button } from '@/components/ui/button';
+
+// SEO metadata specific to blog page
+const seo = {
+	title: "Security Audit Blog | Expert Insights & Best Practices",
+	description: "Stay updated with expert articles on AI in security auditing, GDPR compliance, cloud security, and zero trust architecture. Practical guides and insights from industry leaders.",
+	image: "/og-image.png",
+	canonicalURL: Astro.site + Astro.url.pathname,
+};
 ---
 
-<Layout>
+<Layout {...seo}>
   <Header />
   <main>
     {/* Hero Section */}

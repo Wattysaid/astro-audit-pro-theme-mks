@@ -3,9 +3,17 @@ import Layout from '../layouts/main.astro';
 import Header from '@/components/layout/Header';
 import Footer from '@/components/layout/Footer';
 import { Button } from '@/components/ui/button';
+
+// SEO metadata specific to help center page
+const seo = {
+	title: "Help Center | Audit Pro Support & Documentation",
+	description: "Get help with security auditing, compliance templates, and platform features. Access tutorials, API documentation, troubleshooting guides, and 24/7 expert support.",
+	image: "/og-image.png",
+	canonicalURL: Astro.site + Astro.url.pathname,
+};
 ---
 
-<Layout>
+<Layout {...seo}>
   <Header />
   <main>
     {/* Hero Section */}

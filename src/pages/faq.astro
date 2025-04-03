@@ -3,9 +3,17 @@ import Layout from '../layouts/main.astro';
 import Header from '@/components/layout/Header';
 import Footer from '@/components/layout/Footer';
 import { Button } from '@/components/ui/button';
+
+// SEO metadata specific to FAQ page
+const seo = {
+	title: "Security Auditing FAQ | Audit Pro Help & Support",
+	description: "Find answers about security auditing, compliance standards, AI-powered analysis, pricing, and platform features. 24/7 expert support and comprehensive training resources available.",
+	image: "/og-image.png",
+	canonicalURL: Astro.site + Astro.url.pathname,
+};
 ---
 
-<Layout>
+<Layout {...seo}>
   <Header />
   <main>
     {/* Hero Section */}
