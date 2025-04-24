@@ -2,7 +2,7 @@
 
 A professional Astro 5 theme built with React, TypeScript, and Tailwind CSS that transforms security auditing with AI-powered assessment tools, automated compliance checks, and comprehensive quality management workflows.
 
-[**_SOON:_** Live Preview Here](#)
+[**_Live Preview Here_**](https://audit.corytrimm.com/)
 
 ![Audit Pro Preview](./preview.png)
 
