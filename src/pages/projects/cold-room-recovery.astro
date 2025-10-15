@@ -1,0 +1,70 @@
+---
+import ProjectPage from '../../layouts/project-page.astro';
+
+const seo = {
+  title: 'Cold Room Recovery | Lockyer Valley Farm Case Study',
+  description: 'See how MKS Rural Services restored a failing cold room ahead of harvest, reduced energy costs, and implemented a maintenance program for a Lockyer Valley producer.',
+  image: '/service/service-maintenance-1.jpg',
+  canonicalURL: Astro.site + Astro.url.pathname,
+};
+---
+
+<ProjectPage
+  seo={seo}
+  title="Cold Room Recovery for a Lockyer Valley Farm"
+  summary="When a key cold room failed days before harvest, we responded with stocked parts, smart diagnostics, and a long-term maintenance plan that keeps produce safe and overheads down."
+  heroImage="/service/service-maintenance-1.jpg"
+  heroImageAlt="Technician cleaning refrigeration coils inside a cold room"
+  ctaHeading="Need dependable cold room support?"
+  ctaBody="Call 0405 837 584 or email admin@mksruralservices.com and we’ll bring the workshop to you."
+  ctaPrimary={{ label: 'Call 0405 837 584', href: 'tel:0405837584' }}
+  ctaSecondary={{ label: 'Email the team', href: 'mailto:admin@mksruralservices.com?subject=Cold%20Room%20Support' }}
+>
+  <section class="grid gap-8 md:grid-cols-2">
+    <article class="rounded-2xl border border-slate-200 bg-white p-6 shadow-sm">
+      <h2 class="text-xl font-semibold text-slate-900">Client snapshot</h2>
+      <p class="mt-3 text-base text-slate-700">
+        Family-owned vegetable producer in Gatton, QLD, relying on a 24/7 cold storage facility to preserve freshly picked produce before market transport.
+      </p>
+    </article>
+    <article class="rounded-2xl border border-slate-200 bg-white p-6 shadow-sm">
+      <h2 class="text-xl font-semibold text-slate-900">Primary goals</h2>
+      <ul class="mt-3 space-y-2 text-base text-slate-700">
+        <li>• Restore cold room performance before peak harvest.</li>
+        <li>• Stop escalating power costs caused by overheating equipment.</li>
+        <li>• Put a preventative plan in place to avoid future downtime.</li>
+      </ul>
+    </article>
+  </section>
+
+  <section class="space-y-6">
+    <h2 class="text-2xl font-bold text-slate-900">What we discovered</h2>
+    <p class="text-base text-slate-700">
+      The compressor was operating outside its safe temperature range due to clogged condenser fins and restricted airflow. Refrigerant pressures were also drifting because of inconsistent servicing.
+    </p>
+    <ul class="space-y-3 text-base text-slate-700">
+      <li><strong>Thermal imaging</strong> revealed hot spots across the discharge line, pointing to a struggling compressor.</li>
+      <li><strong>Airflow checks</strong> found heavy dust and vegetation blocking the condenser coil, limiting heat rejection.</li>
+      <li><strong>Data logging</strong> showed cycling irregularities, a sign maintenance intervals were too casual for seasonal workloads.</li>
+    </ul>
+  </section>
+
+  <section class="space-y-6">
+    <h2 class="text-2xl font-bold text-slate-900">Our solution</h2>
+    <ul class="space-y-3 text-base text-slate-700">
+      <li>Replaced the failing compressor using stocked parts from our mobile workshop to avoid interstate freight delays.</li>
+      <li>Completed a full condenser and evaporator clean, reinstating design airflow and reducing compressor head pressure.</li>
+      <li>Balanced refrigerant charge, verified fan speeds, and recalibrated control settings for stable cycling.</li>
+      <li>Installed data loggers for continuous temperature monitoring and trained staff on daily visual inspections.</li>
+    </ul>
+  </section>
+
+  <section class="space-y-6">
+    <h2 class="text-2xl font-bold text-slate-900">Results delivered</h2>
+    <ul class="space-y-3 text-base text-slate-700">
+      <li>Product loss dropped to less than 2% during a busy harvest window.</li>
+      <li>Energy consumption improved by 18% within the first billing cycle.</li>
+      <li>Quarterly preventative visits now align with picking season to keep the system in peak condition.</li>
+    </ul>
+  </section>
+</ProjectPage>

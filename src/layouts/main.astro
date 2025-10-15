@@ -1,56 +1,234 @@
 ---
 import '../styles/global.css';
-const { content } = Astro.props;
-
-// Default SEO values
 const {
-	title = "Audit Pro - Modern Security Auditing Platform",
-	description = "Professional security auditing platform with AI-powered assessment tools, automated compliance checks, and quality management workflows. Built with Astro, React, and TypeScript.",
-	image = "/og-image.png",
-	canonicalURL = new URL(Astro.url.pathname, Astro.site),
+  title = 'MKS Rural Services | Refrigeration & HVAC Specialists',
+  description = 'Family-owned HVAC technicians serving Queensland with licensed refrigeration repairs, custom system design, and preventative maintenance for rural, residential, and commercial clients.',
+  image = '/og-image.png',
+  canonicalURL = new URL(Astro.url.pathname, Astro.site),
 } = Astro.props;
 
-// Keywords relevant to the platform
-const keywords = "security auditing, compliance management, AI assessment tools, quality management, security platform, automated audits, IT security, compliance checks, audit workflow, security assessment";
+const keywords = 'refrigeration repairs, air conditioning Queensland, rural HVAC services, Lockyer Valley HVAC, Somerset Region refrigeration, coil cleaning Queensland, MKS Rural Services';
+const gaId = import.meta.env.PUBLIC_GOOGLE_ANALYTICS_ID ?? 'G-252MSVB5DS';
+const gtmId = import.meta.env.PUBLIC_GOOGLE_TAG_MANAGER_ID ?? 'GTM-5G7Z77KQ';
 ---
 
 <html lang="en">
-	<head>
-		<meta charset="utf-8" />
-		<meta name="viewport" content="width=device-width" />
-		<link rel="icon" type="image/svg+xml" href="/favicon.svg" />
-		
-		<!-- Primary Meta Tags -->
-		<title>{title}</title>
-		<meta name="title" content={title} />
-		<meta name="description" content={description} />
-		<meta name="keywords" content={keywords} />
-		<link rel="canonical" href={canonicalURL} />
-		
-		<!-- Open Graph / Facebook -->
-		<meta property="og:type" content="website" />
-		<meta property="og:url" content={canonicalURL} />
-		<meta property="og:title" content={title} />
-		<meta property="og:description" content={description} />
-		<meta property="og:image" content={image} />
-		
-		<!-- Twitter -->
-		<meta property="twitter:card" content="summary_large_image" />
-		<meta property="twitter:url" content={canonicalURL} />
-		<meta property="twitter:title" content={title} />
-		<meta property="twitter:description" content={description} />
-		<meta property="twitter:image" content={image} />
-		
-		<!-- Additional Meta Tags -->
-		<meta name="robots" content="index, follow" />
-		<meta name="theme-color" content="#0F172A" />
-		<meta name="generator" content={Astro.generator} />
-		
-		<!-- Preconnect to common domains -->
-		<link rel="preconnect" href="https://fonts.googleapis.com" />
-		<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-	</head>
-	<body>
-		<slot />
-	</body>
+  <head>
+    {gaId && (
+      <>
+        <!-- Google tag (gtag.js) -->
+        <script async src={`https://www.googletagmanager.com/gtag/js?id=${gaId}`}></script>
+        <script is:inline>{`window.dataLayer = window.dataLayer || [];
+function gtag(){dataLayer.push(arguments);}
+gtag('js', new Date());
+
+gtag('config', '${gaId}');`}</script>
+      </>
+    )}
+
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width" />
+    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+
+    <title>{title}</title>
+    <meta name="title" content={title} />
+    <meta name="description" content={description} />
+    <meta name="keywords" content={keywords} />
+    <link rel="canonical" href={canonicalURL} />
+
+    <meta property="og:type" content="website" />
+    <meta property="og:url" content={canonicalURL} />
+    <meta property="og:title" content={title} />
+    <meta property="og:description" content={description} />
+    <meta property="og:image" content={image} />
+
+    <meta property="twitter:card" content="summary_large_image" />
+    <meta property="twitter:url" content={canonicalURL} />
+    <meta property="twitter:title" content={title} />
+    <meta property="twitter:description" content={description} />
+    <meta property="twitter:image" content={image} />
+
+    <meta name="robots" content="index, follow" />
+    <meta name="theme-color" content="#0F172A" />
+    <meta name="generator" content={Astro.generator} />
+
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+
+    {gtmId && (
+      <>
+        <!-- Google Tag Manager -->
+        <script is:inline>{`(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+})(window,document,'script','dataLayer','${gtmId}');`}</script>
+        <!-- End Google Tag Manager -->
+      </>
+    )}
+
+    {!gtmId && (
+      <meta name="google-tag-manager" content="Set PUBLIC_GOOGLE_TAG_MANAGER_ID in .env" />
+    )}
+  </head>
+  <body>
+    {gtmId && (
+      <>
+        <!-- Google Tag Manager (noscript) -->
+        <noscript>
+          <iframe
+            src={`https://www.googletagmanager.com/ns.html?id=${gtmId}`}
+            height="0"
+            width="0"
+            style="display:none;visibility:hidden"
+          ></iframe>
+        </noscript>
+        <!-- End Google Tag Manager (noscript) -->
+      </>
+    )}
+    <slot />
+    <div
+      id="call-modal"
+      class="fixed inset-0 z-[200] hidden items-center justify-center px-4"
+      aria-hidden="true"
+    >
+      <div
+        class="absolute inset-0 bg-slate-900/60"
+        data-call-modal-close
+        aria-hidden="true"
+      ></div>
+      <div
+        role="dialog"
+        aria-modal="true"
+        aria-labelledby="call-modal-heading"
+        class="relative z-10 w-full max-w-xl rounded-2xl bg-white p-8 shadow-2xl space-y-6"
+      >
+        <button
+          type="button"
+          class="absolute right-4 top-4 text-slate-400 hover:text-slate-600"
+          data-call-modal-close
+          aria-label="Close call preparation guide"
+        >
+          ✕
+        </button>
+        <div class="space-y-2">
+          <p class="text-xs font-semibold uppercase tracking-wide text-sky-700">Call preparation</p>
+          <h2 id="call-modal-heading" class="text-2xl font-bold text-slate-900">Call 0405 837 584</h2>
+          <p class="text-sm text-slate-600">
+            Thank you for choosing to call MKS Rural Services. Before you dial, having a few details handy helps us get the right gear and support on the road faster.
+          </p>
+        </div>
+        <div class="space-y-4 text-sm text-slate-600">
+          <div>
+            <p class="font-semibold text-slate-800">Please gather:</p>
+            <ul class="mt-2 space-y-1 list-disc pl-5">
+              <li>The service you think you need — Breakdown Repairs &amp; Diagnostics, System Design, Install &amp; Upgrades, or Maintenance Plans &amp; Service Contracts.</li>
+              <li>Contact details for the person who can meet us onsite and grant access.</li>
+              <li>How long the issue has been present and any recent works, alarms, or changes we should know about.</li>
+            </ul>
+          </div>
+          <div class="rounded-xl bg-slate-50 p-4 space-y-2">
+            <p class="font-semibold text-slate-800">Share your exact location with what3words</p>
+            <p>
+              If the equipment is hard to find, open the
+              <a
+                href="https://what3words.com/how-to-use-the-what3words-app"
+                target="_blank"
+                rel="noreferrer"
+                class="font-semibold text-sky-700 hover:underline"
+              >what3words app</a>
+              or website, tap the location, and note the three-word address. Include it in your call so we can head straight to the right spot.
+            </p>
+          </div>
+          <p class="text-xs text-slate-500">Tip: You can hit Escape or tap anywhere outside this window to close it.</p>
+        </div>
+        <div class="flex flex-col gap-3 sm:flex-row sm:justify-end">
+          <button
+            type="button"
+            class="inline-flex items-center justify-center rounded-lg border border-slate-300 px-4 py-2 text-sm font-semibold text-slate-700 transition hover:bg-slate-100"
+            data-call-modal-close
+          >
+            I’ll call later
+          </button>
+          <a
+            href="tel:0405837584"
+            data-bypass-call-prompt
+            data-call-modal-focus
+            class="inline-flex items-center justify-center rounded-lg bg-sky-600 px-4 py-2 text-sm font-semibold text-white transition hover:bg-sky-700"
+          >
+            Call now
+          </a>
+        </div>
+      </div>
+    </div>
+    <script is:inline>
+      {`(() => {
+        if (typeof window === 'undefined') return;
+        if (document.readyState === 'loading') {
+          document.addEventListener('DOMContentLoaded', setup);
+        } else {
+          setup();
+        }
+
+        function setup() {
+          const callModal = document.getElementById('call-modal');
+          if (!callModal) return;
+          const body = document.body;
+          const closeElements = callModal.querySelectorAll('[data-call-modal-close]');
+          const focusTarget = callModal.querySelector('[data-call-modal-focus]');
+          const phoneTargets = ['tel:0405837584', 'tel:+61405837584'];
+
+          const openModal = () => {
+            callModal.setAttribute('aria-hidden', 'false');
+            callModal.classList.remove('hidden');
+            callModal.classList.add('flex');
+            body.classList.add('overflow-hidden');
+            if (focusTarget && typeof focusTarget.focus === 'function') {
+              setTimeout(() => focusTarget.focus(), 0);
+            }
+          };
+
+          const closeModal = () => {
+            callModal.setAttribute('aria-hidden', 'true');
+            callModal.classList.add('hidden');
+            callModal.classList.remove('flex');
+            body.classList.remove('overflow-hidden');
+          };
+
+          const registerLinks = () => {
+            const links = document.querySelectorAll('a[href^="tel:"]');
+            links.forEach((link) => {
+              if (link.hasAttribute('data-bypass-call-prompt')) return;
+              if (link.dataset.callPromptBound === 'true') return;
+              const href = (link.getAttribute('href') || '').toLowerCase();
+              if (!phoneTargets.some((phone) => href.startsWith(phone))) return;
+              link.dataset.callPromptBound = 'true';
+              link.addEventListener('click', (event) => {
+                event.preventDefault();
+                openModal();
+              });
+            });
+          };
+
+          registerLinks();
+
+          const observer = new MutationObserver(() => registerLinks());
+          observer.observe(document.body, { childList: true, subtree: true });
+
+          document.addEventListener('keydown', (event) => {
+            if (event.key === 'Escape' && !callModal.classList.contains('hidden')) {
+              closeModal();
+            }
+          });
+
+          closeElements.forEach((el) => {
+            el.addEventListener('click', (event) => {
+              event.preventDefault();
+              closeModal();
+            });
+          });
+        }
+      })();`}
+    </script>
+  </body>
 </html>

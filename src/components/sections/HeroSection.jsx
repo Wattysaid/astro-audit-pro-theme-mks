@@ -1,75 +1,61 @@
-import React, { useState } from 'react';
+import React from 'react';
 import { Button } from '@/components/ui/button';
-import { Dialog, DialogContent, DialogClose } from '@/components/ui/dialog';
-import { X, Play } from 'lucide-react';
 
 const HeroSection = () => {
-  const [videoOpen, setVideoOpen] = useState(false);
-  
   return (
-    <div className="relative bg-gradient-to-r from-indigo-50 to-blue-50 py-16 px-4 md:px-8">
-      <div className="container mx-auto max-w-7xl">
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-12 items-center">
-          <div>
-            <h1 className="text-3xl md:text-4xl lg:text-5xl font-bold text-gray-800 mb-4">
-              The <span className="marker-underline">complete</span>{' '}
-              IT security audit platform
-            </h1>
-            <p className="text-lg text-gray-700 mb-8">
-              Discover organizations needing security assessments, craft winning audit reports, and manage your audits — all in one place.
+    <section className="bg-gradient-to-br from-sky-50 via-white to-slate-100 py-20">
+      <div className="container mx-auto max-w-6xl px-4 grid gap-12 md:grid-cols-2 items-center">
+        <div>
+          <p className="text-sm font-semibold uppercase tracking-wide text-sky-700">G'day from Fernvale</p>
+          <h1 className="mt-3 text-3xl md:text-5xl font-bold text-slate-900 leading-tight">
+            Country care for your comfort across the Lockyer Valley &amp; Somerset Regions
+          </h1>
+          <div className="mt-6 space-y-4">
+            <p className="text-lg text-slate-700">
+              MKS Rural Services pairs 25+ years of refrigeration and air conditioning know-how with the warm, country attitude locals expect. We listen first, plan carefully, and deliver work that keeps homes, farms, and businesses running smoothly.
             </p>
-            <Button size="lg" className="bg-orange-500 hover:bg-orange-600 text-white py-6 px-8 rounded-md">
-              Try 14 days free
-            </Button>
-            <p className="text-sm text-gray-500 mt-4">Only 14 free trials left this week.</p>
+            <ul className="space-y-2 text-base text-slate-700">
+              <li>• Friendly, family-owned HVAC specialists who never rush a job.</li>
+              <li>• Fully licensed (QBCC) and safety-led on every site visit.</li>
+              <li>• Mobile workshop stocked with parts to minimise downtime.</li>
+            </ul>
           </div>
-          
-          <div className="relative bg-white p-6 rounded-xl shadow-lg">
-            <div className="bg-blue-50 rounded-lg p-4 mb-4">
-              <div className="flex justify-between items-center mb-4">
-                <div>
-                  <p className="text-sm text-gray-600">Enterprise Solutions Inc.</p>
-                  <p className="text-xs text-gray-500">Fortune 500 Technology</p>
-                </div>
-                <p className="text-lg font-bold text-black">$50,000</p>
-              </div>
-              <Button size="sm" variant="outline" className="text-orange-500 border-orange-500 w-full">
-                <span className="mr-2">❤</span> Save
-              </Button>
-            </div>
-            
-            <div className="relative mt-4 mb-8 h-48 bg-gray-100 rounded-lg flex items-center justify-center cursor-pointer"
-                 onClick={() => setVideoOpen(true)}>
-              <div className="w-16 h-16 bg-indigo-600 rounded-full flex items-center justify-center">
-                <Play className="w-8 h-8 text-white" />
-              </div>
-            </div>
-            
-            <div className="grid grid-cols-2 gap-4">
-              <div className="bg-gray-50 p-4 rounded-lg">
-                <p className="text-xs text-gray-500">10</p>
-                <p className="text-sm font-medium">Auditor Deadline</p>
-              </div>
-              <div className="bg-gray-50 p-4 rounded-lg">
-                <p className="text-xs text-gray-500">17</p>
-                <p className="text-sm font-medium">Task Due</p>
-              </div>
+          <div className="mt-8 flex flex-col gap-4 sm:flex-row sm:items-center">
+            <Button size="lg" className="bg-sky-600 hover:bg-sky-700 text-white px-8 py-6" asChild>
+              <a href="tel:0405837584">Call 0405 837 584</a>
+            </Button>
+            <div className="text-sm text-slate-600">
+              Prefer email?{' '}
+              <a href="mailto:admin@mksruralservices.com" className="text-sky-700 font-medium hover:underline">
+                admin@mksruralservices.com
+              </a>
             </div>
           </div>
         </div>
-      </div>
-      
-      <Dialog open={videoOpen} onOpenChange={setVideoOpen}>
-        <DialogContent className="sm:max-w-3xl">
-          <DialogClose className="absolute right-4 top-4 text-gray-500 hover:text-gray-800">
-            <X className="h-5 w-5" />
-          </DialogClose>
-          <div className="aspect-video bg-black rounded-lg flex items-center justify-center">
-            <p className="text-white">Video placeholder - Demo of Audit Pro platform</p>
+        <div className="bg-white/90 backdrop-blur-xl border border-slate-100 rounded-2xl shadow-xl p-8 space-y-6">
+          <div>
+            <p className="text-sm font-medium text-sky-700">Mark Sherwood, Owner &amp; Lead Technician</p>
+            <p className="text-2xl font-semibold text-slate-900 mt-2">“Specialists in rural HVAC, we’re the best.”</p>
           </div>
-        </DialogContent>
-      </Dialog>
-    </div>
+          <div className="grid gap-4 sm:grid-cols-2">
+            <div className="rounded-xl border border-slate-200 p-4">
+              <p className="text-3xl font-bold text-sky-600">ARC</p>
+              <p className="text-sm text-slate-600 mt-2">AU43341</p>
+            </div>
+            <div className="rounded-xl border border-slate-200 p-4">
+              <p className="text-3xl font-bold text-slate-900">QBCC</p>
+              <p className="text-sm text-slate-600 mt-2">15224670</p>
+            </div>
+          </div>
+          <div className="rounded-xl bg-slate-50 border border-slate-200 p-4 space-y-2">
+            <p className="text-sm uppercase tracking-wide text-slate-500">Promise</p>
+            <p className="text-base text-slate-700">
+              We leave every site safer, tidier, and better prepared for Queensland heat — guaranteed.
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
   );
 };
 

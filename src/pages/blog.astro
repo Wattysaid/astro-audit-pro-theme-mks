@@ -2,176 +2,64 @@
 import Layout from '../layouts/main.astro';
 import Header from '@/components/layout/Header';
 import Footer from '@/components/layout/Footer';
-import ResourceCard from '@/components/ui/resource-card';
-import { Button } from '@/components/ui/button';
 
-// SEO metadata specific to blog page
 const seo = {
-	title: "Security Audit Blog | Expert Insights & Best Practices",
-	description: "Stay updated with expert articles on AI in security auditing, GDPR compliance, cloud security, and zero trust architecture. Practical guides and insights from industry leaders.",
-	image: "/og-image.png",
-	canonicalURL: Astro.site + Astro.url.pathname,
+  title: 'News & Insights | MKS Rural Services HVAC Blog',
+  description: 'Read refrigeration and air conditioning updates, seasonal maintenance reminders, and community stories from MKS Rural Services in Fernvale, Queensland.',
+  image: '/og-image.png',
+  canonicalURL: Astro.site + Astro.url.pathname,
 };
+
+const posts = [
+  {
+    title: 'Preparing Your Cold Room for Queensland Summers',
+    date: 'January 2025',
+    summary: 'A pre-season checklist covering coils, seals, and generator backups to protect produce during heatwaves.',
+    action: 'Request the checklist',
+    href: 'mailto:admin@mksruralservices.com?subject=Cold%20Room%20Checklist%20Request'
+  },
+  {
+    title: 'Should You Repair or Replace an Aging Split System?',
+    date: 'December 2024',
+    summary: 'Mark shares tell-tale signs it is time to upgrade, plus budgeting tips for households and rentals.',
+    action: 'Book an in-home assessment',
+    href: 'tel:0405837584'
+  },
+  {
+    title: 'Case Study: Mobile Workshop in Action',
+    date: 'November 2024',
+    summary: 'How a late-night refrigeration breakdown at a rural grocer was resolved in one visit thanks to our stocked trailer.',
+    action: 'Read the project summary',
+    href: '/success-stories'
+  }
+];
 ---
 
 <Layout {...seo}>
   <Header />
-  <main>
-    {/* Hero Section */}
-    <section class="bg-gradient-to-b from-indigo-50 to-white py-20">
-      <div class="container mx-auto max-w-7xl px-4">
-        <div class="text-center">
-          <h1 class="text-4xl md:text-5xl font-bold text-gray-800 mb-6">
-            Security Audit Insights
-          </h1>
-          <p class="text-xl text-gray-600 max-w-3xl mx-auto">
-            Expert articles, guides, and insights on IT security auditing and compliance.
-          </p>
-        </div>
-      </div>
-    </section>
-
-    {/* Featured Posts */}
-    <section class="py-16">
-      <div class="container mx-auto max-w-7xl px-4">
-        <h2 class="text-3xl font-bold text-gray-800 mb-12">Featured Posts</h2>
-        <div class="grid md:grid-cols-2 gap-8">
-          <ResourceCard
-            title="The Future of AI in Security Auditing"
-            description="Explore how artificial intelligence is transforming the security audit landscape and what it means for your organization."
-            image="/placeholder-1.jpg"
-            author="Dr. Sarah Chen"
-            date="Apr 1, 2025"
-            readTime="8 min"
-            category="Trends"
-            tags={["AI", "Machine Learning", "Security"]}
-            type="blog"
-          />
-          <ResourceCard
-            title="Implementing Zero Trust Security"
-            description="A comprehensive guide to implementing zero trust architecture in your security audit framework."
-            image="/placeholder-2.jpg"
-            author="Michael Rodriguez"
-            date="Mar 28, 2025"
-            readTime="12 min"
-            category="Best Practices"
-            tags={["Zero Trust", "Security Architecture", "Implementation"]}
-            type="blog"
-          />
-        </div>
-      </div>
-    </section>
-
-    {/* Latest Posts */}
-    <section class="py-16 bg-gray-50">
-      <div class="container mx-auto max-w-7xl px-4">
-        <div class="flex justify-between items-center mb-12">
-          <h2 class="text-3xl font-bold text-gray-800">Latest Posts</h2>
-          <div class="flex gap-4">
-            <Button variant="outline">
-              Filter
-            </Button>
-            <select class="px-4 py-2 rounded-lg border border-gray-200 bg-white">
-              <option>Most Recent</option>
-              <option>Most Popular</option>
-              <option>Trending</option>
-            </select>
-          </div>
-        </div>
-        <div class="grid md:grid-cols-3 gap-8">
-          <ResourceCard
-            title="GDPR Compliance Checklist 2025"
-            description="Updated guidelines and checklist for maintaining GDPR compliance in your security audits."
-            image="/placeholder-3.jpg"
-            author="Emma Thompson"
-            date="Mar 25, 2025"
-            readTime="10 min"
-            category="Compliance"
-            tags={["GDPR", "Privacy", "Compliance"]}
-            type="blog"
-          />
-          <ResourceCard
-            title="Cloud Security Audit Best Practices"
-            description="Essential practices for conducting thorough security audits in cloud environments."
-            image="/placeholder-4.jpg"
-            author="David Park"
-            date="Mar 22, 2025"
-            readTime="15 min"
-            category="Cloud Security"
-            tags={["Cloud", "AWS", "Azure", "Security"]}
-            type="blog"
-          />
-          <ResourceCard
-            title="Automated Security Testing Tools"
-            description="A comparison of leading automated security testing tools for modern audit processes."
-            image="/placeholder-5.jpg"
-            author="Alex Chen"
-            date="Mar 20, 2025"
-            readTime="7 min"
-            category="Tools"
-            tags={["Automation", "Testing", "Tools"]}
-            type="blog"
-          />
-        </div>
-      </div>
-    </section>
-
-    {/* Categories */}
-    <section class="py-16">
-      <div class="container mx-auto max-w-7xl px-4">
-        <h2 class="text-3xl font-bold text-gray-800 mb-12">Browse by Category</h2>
-        <div class="grid md:grid-cols-4 gap-6">
-          <a href="/best-practices" class="bg-white rounded-xl p-6 shadow-sm hover:shadow-md transition-shadow">
-            <div class="w-12 h-12 bg-blue-100 rounded-lg flex items-center justify-center text-2xl mb-4">
-              🔒
-            </div>
-            <h3 class="text-xl font-bold text-gray-800 mb-2">Security</h3>
-            <p class="text-gray-600">125 articles</p>
-          </a>
-          <a href="/explore-industries" class="bg-white rounded-xl p-6 shadow-sm hover:shadow-md transition-shadow">
-            <div class="w-12 h-12 bg-green-100 rounded-lg flex items-center justify-center text-2xl mb-4">
-              📋
-            </div>
-            <h3 class="text-xl font-bold text-gray-800 mb-2">Compliance</h3>
-            <p class="text-gray-600">98 articles</p>
-          </a>
-          <a href="/explore-organizations" class="bg-white rounded-xl p-6 shadow-sm hover:shadow-md transition-shadow">
-            <div class="w-12 h-12 bg-purple-100 rounded-lg flex items-center justify-center text-2xl mb-4">
-              ☁️
-            </div>
-            <h3 class="text-xl font-bold text-gray-800 mb-2">Cloud</h3>
-            <p class="text-gray-600">84 articles</p>
-          </a>
-          <a href="/help-center" class="bg-white rounded-xl p-6 shadow-sm hover:shadow-md transition-shadow">
-            <div class="w-12 h-12 bg-orange-100 rounded-lg flex items-center justify-center text-2xl mb-4">
-              🤖
-            </div>
-            <h3 class="text-xl font-bold text-gray-800 mb-2">Automation</h3>
-            <p class="text-gray-600">67 articles</p>
-          </a>
-        </div>
-      </div>
-    </section>
-
-    {/* Newsletter */}
-    <section class="py-16 bg-gradient-to-r from-orange-100 to-blue-100">
-      <div class="container mx-auto max-w-7xl px-4 text-center">
-        <h2 class="text-3xl font-bold text-gray-800 mb-6">
-          Stay Updated
-        </h2>
-        <p class="text-xl text-gray-600 mb-8 max-w-3xl mx-auto">
-          Subscribe to our newsletter for the latest security audit insights and best practices.
+  <main class="bg-white">
+    <section class="bg-gradient-to-b from-sky-50 via-white to-slate-100 py-20">
+      <div class="container mx-auto max-w-4xl px-4 text-center space-y-4">
+        <p class="text-sm font-semibold uppercase tracking-wide text-sky-700">News &amp; Insights</p>
+        <h1 class="text-3xl md:text-5xl font-bold text-slate-900">Friendly advice from your local HVAC crew</h1>
+        <p class="text-lg text-slate-700">
+          We keep posts short, practical, and rooted in real jobs across the Lockyer Valley and Somerset Regions. Share them with neighbours or your workplace safety team.
         </p>
-        <div class="max-w-xl mx-auto flex gap-4">
-          <input
-            type="email"
-            placeholder="Enter your email"
-            class="flex-1 px-6 py-3 rounded-lg border border-gray-200 focus:outline-none focus:ring-2 focus:ring-blue-500"
-          />
-          <Button size="lg" className="bg-orange-500 hover:bg-orange-600 text-white">
-            <a href="/newsletter" class="text-white">Subscribe to Newsletter</a>
-          </Button>
-        </div>
+      </div>
+    </section>
+
+    <section class="py-16">
+      <div class="container mx-auto max-w-5xl px-4 space-y-6">
+        {posts.map((post) => (
+          <article class="rounded-2xl border border-slate-200 bg-white p-6 shadow-sm" key={post.title}>
+            <p class="text-sm font-semibold uppercase tracking-wide text-sky-700">{post.date}</p>
+            <h2 class="mt-2 text-2xl font-semibold text-slate-900">{post.title}</h2>
+            <p class="mt-3 text-base text-slate-700">{post.summary}</p>
+            <div class="mt-4 text-sm font-medium text-sky-700">
+              <a href={post.href} class="hover:underline">{post.action}</a>
+            </div>
+          </article>
+        ))}
       </div>
     </section>
   </main>

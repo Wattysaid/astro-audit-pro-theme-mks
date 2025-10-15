@@ -1,0 +1,63 @@
+---
+import ProjectPage from '../../layouts/project-page.astro';
+
+const seo = {
+  title: 'Multi-Head Split Design | Heritage Cottage Case Study',
+  description: 'Discover how MKS Rural Services delivered a multi-head split system for a heritage cottage, balancing energy efficiency with discreet styling.',
+  image: '/design/design-project-2.jpg',
+  canonicalURL: Astro.site + Astro.url.pathname,
+};
+---
+
+<ProjectPage
+  seo={seo}
+  overline="Design & Installation Report"
+  title="Multi-Head Split System for a Heritage Cottage"
+  summary="A Lowood cottage needed zoned comfort without bulky ductwork. We designed a multi-head split solution with concealed pipework and custom covers to preserve the façade."
+  heroImage="/design/design-project-2.jpg"
+  heroImageAlt="Outdoor multi-head split system installation on a heritage cottage"
+>
+  <section class="grid gap-8 md:grid-cols-2">
+    <article class="rounded-2xl border border-slate-200 bg-white p-6 shadow-sm">
+      <h2 class="text-xl font-semibold text-slate-900">Client snapshot</h2>
+      <p class="mt-3 text-base text-slate-700">
+        Renovated two-bedroom cottage with original weatherboards and minimal roof access. Owners work from home and wanted quiet, efficient cooling and heating in targeted rooms.
+      </p>
+    </article>
+    <article class="rounded-2xl border border-slate-200 bg-white p-6 shadow-sm">
+      <h2 class="text-xl font-semibold text-slate-900">Primary goals</h2>
+      <ul class="mt-3 space-y-2 text-base text-slate-700">
+        <li>• Provide independent temperature control for the office, master bedroom, and open-plan living area.</li>
+        <li>• Hide pipework and condensate drains to maintain the cottage’s classic exterior.</li>
+        <li>• Prevent gecko damage that previously impacted a single-room split system.</li>
+      </ul>
+    </article>
+  </section>
+
+  <section class="space-y-6">
+    <h2 class="text-2xl font-bold text-slate-900">What we discovered</h2>
+    <ul class="space-y-3 text-base text-slate-700">
+      <li>Wall cavities were narrow and already filled with historic wiring, requiring creative routing of refrigerant lines.</li>
+      <li>Previous installers left penetrations unsealed, giving pests free access to electrical panels.</li>
+      <li>Condensate drainage needed relocation to avoid staining the freshly painted exterior. </li>
+    </ul>
+  </section>
+
+  <section class="space-y-6">
+    <h2 class="text-2xl font-bold text-slate-900">Our solution</h2>
+    <ul class="space-y-3 text-base text-slate-700">
+      <li>Specified a three-port multi-head system with low-profile indoor units tailored to each room’s footprint.</li>
+      <li>Ran pipework through custom-fabricated aluminium covers painted to match the weatherboards.</li>
+      <li>Sealed all penetrations, added pest deterrents, and rerouted condensate drains to the garden bed.</li>
+    </ul>
+  </section>
+
+  <section class="space-y-6">
+    <h2 class="text-2xl font-bold text-slate-900">Results delivered</h2>
+    <ul class="space-y-3 text-base text-slate-700">
+      <li>Independent comfort in key rooms with whisper-quiet operation supporting home office work.</li>
+      <li>No visible pipework or drainage on the street-facing façade.</li>
+      <li>Pest ingress eliminated thanks to sealed penetrations and longer-lasting deterrents.</li>
+    </ul>
+  </section>
+</ProjectPage>

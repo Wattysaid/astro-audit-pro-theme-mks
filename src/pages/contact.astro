@@ -1,0 +1,97 @@
+---
+import Layout from '../layouts/main.astro';
+import Header from '@/components/layout/Header';
+import Footer from '@/components/layout/Footer';
+
+const seo = {
+  title: 'Contact MKS Rural Services | Book HVAC Support in Queensland',
+  description: 'Reach out to MKS Rural Services for refrigeration and air conditioning call-outs, maintenance plans, and project consultations across the Lockyer Valley and Somerset Regions.',
+  image: '/og-image.png',
+  canonicalURL: Astro.site + Astro.url.pathname,
+};
+
+const contactMethods = [
+  {
+    title: 'Call the workshop',
+    detail: 'Phone 0405 837 584 and speak directly with Mark or the team. Leave your name, suburb, and issue if we are onsite and we will call back shortly.'
+  },
+  {
+    title: 'Email your enquiry',
+    detail: 'Send photos, equipment details, or maintenance requests to admin@mksruralservices.com — perfect for planning quotes or ongoing contracts.'
+  },
+  {
+    title: 'Book online',
+    detail: 'Use our Google booking link to select a preferred time for non-urgent visits. We will confirm availability within one business day.',
+    href: 'https://www.google.com/maps/search/?q=MKS+Rural+Services',
+    cta: 'Open booking page'
+  }
+];
+
+const serviceHours = [
+  { label: 'Weekdays', value: '7:30 am – 5:30 pm' },
+  { label: 'After-hours & weekends', value: 'Emergency call-outs available on request' },
+];
+---
+
+<Layout {...seo}>
+  <Header />
+  <main class="bg-white">
+    <section class="bg-gradient-to-b from-sky-50 via-white to-slate-100 py-20">
+      <div class="container mx-auto max-w-4xl px-4 text-center space-y-4">
+        <p class="text-sm font-semibold uppercase tracking-wide text-sky-700">Contact</p>
+        <h1 class="text-3xl md:text-5xl font-bold text-slate-900">Let’s solve your HVAC challenge</h1>
+        <p class="text-lg text-slate-700">
+          Whether it’s an urgent breakdown or a long-term maintenance plan, we’re ready to help with friendly, country hospitality and licensed expertise.
+        </p>
+      </div>
+    </section>
+
+    <section class="py-16">
+      <div class="container mx-auto max-w-5xl px-4 grid gap-8 md:grid-cols-2 items-start">
+        <div class="space-y-6">
+          {contactMethods.map((method) => (
+            <div class="rounded-2xl border border-slate-200 bg-white p-6 shadow-sm" key={method.title}>
+              <h2 class="text-xl font-semibold text-slate-900">{method.title}</h2>
+              <p class="mt-3 text-base text-slate-700">{method.detail}</p>
+              {method.href && (
+                <a href={method.href} class="mt-4 inline-flex text-sm font-semibold text-sky-700 hover:underline" target="_blank" rel="noreferrer">
+                  {method.cta}
+                </a>
+              )}
+            </div>
+          ))}
+        </div>
+        <div class="rounded-2xl border border-slate-200 bg-slate-50 p-8 shadow-sm space-y-6">
+          <div>
+            <h3 class="text-lg font-semibold text-slate-900">Company details</h3>
+            <p class="mt-2 text-base text-slate-700">
+              M &amp; KS Rural Services Pty. Ltd.<br />
+              trading as MKS Rural Services
+            </p>
+          </div>
+          <div>
+            <h3 class="text-lg font-semibold text-slate-900">Mailing address</h3>
+            <p class="mt-2 text-base text-slate-700">
+              P.O. Box 80, Fernvale QLD 4306
+            </p>
+          </div>
+          <div>
+            <h3 class="text-lg font-semibold text-slate-900">Service regions</h3>
+            <p class="mt-2 text-base text-slate-700">
+              Fernvale, Lockyer Valley, Somerset Region, and surrounding rural communities. For larger projects we can travel further — just ask.
+            </p>
+          </div>
+          <div>
+            <h3 class="text-lg font-semibold text-slate-900">Operating hours</h3>
+            <ul class="mt-3 space-y-2 text-base text-slate-700">
+              {serviceHours.map((item) => (
+                <li key={item.label}><strong>{item.label}:</strong> {item.value}</li>
+              ))}
+            </ul>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+  <Footer />
+</Layout>

@@ -2,260 +2,258 @@
 import Layout from '../layouts/main.astro';
 import Header from '@/components/layout/Header';
 import Footer from '@/components/layout/Footer';
-import { Button } from '@/components/ui/button';
 
-// SEO metadata specific to success stories page
 const seo = {
-	title: "Customer Success Stories | Audit Pro Security Platform",
-	description: "See how organizations achieve 75% faster audits, 100% compliance rates, and $2M+ annual savings with Audit Pro. Real success stories from TechCorp, SecureBank, HealthTech, and more.",
-	image: "/og-image.png",
-	canonicalURL: Astro.site + Astro.url.pathname,
+  title: 'Project Success Stories | MKS Rural Services Queensland',
+  description: 'Explore detailed HVAC project reports from MKS Rural Services, including agricultural cold rooms, engineering workshops, marine retrofits, professional maintenance programs, and bespoke system designs.',
+  image: '/og-image.png',
+  canonicalURL: Astro.site + Astro.url.pathname,
 };
+
+const projects = [
+  {
+    title: 'Cold room recovery for Lockyer Valley farm',
+    location: 'Gatton, QLD',
+    summary:
+      'Diagnosed a compressor failure ahead of harvest, restored cooling with stocked parts, and introduced a preventative coil cleaning program.',
+    slug: 'cold-room-recovery',
+    outcomes: [
+      'Product loss reduced to less than 2% during peak harvest.',
+      'Energy consumption improved by 18% after coil cleaning program.',
+      'Farm now runs quarterly preventative visits aligned with crop cycles.'
+    ],
+    testimonial: '“Mark picked up straight away, arrived with the right parts, and made sure we had a back-up plan. You cannot get better service.”',
+    image: '/service/service-maintenance-1.jpg',
+    imageAlt: 'Technician cleaning refrigeration coils in a cold room.'
+  },
+  {
+    title: 'Workshop air conditioning upgrade',
+    location: 'Esk, QLD',
+    summary:
+      'Designed and installed a zoned ducted system with smart controls to stabilise temperatures for precision tooling and staff comfort.',
+    slug: 'workshop-air-conditioning-upgrade',
+    outcomes: [
+      'Temperature variance reduced from 10°C to under 3°C.',
+      'Staff productivity and morale improved during summer months.',
+      'Project qualified for manufacturer efficiency rebates and warranty extensions.'
+    ],
+    testimonial: '“The MKS crew worked around our shift changes, kept the place tidy, and handed over with clear documentation. Genuine professionals.”',
+    image: '/og-image.png',
+    imageAlt: 'Workshop air conditioning upgrade illustration.'
+  },
+  {
+    title: 'Marine HVAC retrofit for charter vessel',
+    location: 'Moreton Bay, QLD',
+    summary:
+      'Retrofitted marine-grade HVAC components, upgraded insulation, and implemented a maintenance window aligned with charter schedules.',
+    slug: 'marine-hvac-retrofit',
+    outcomes: [
+      'Cabin noise reduced by 35%, improving guest experience.',
+      'Climate control performance rated “excellent” by passengers post-upgrade.',
+      'Maintenance now completed during routine docking, eliminating cancellations.'
+    ],
+    testimonial: '“MKS handled everything from sourcing marine parts to final testing. Honest updates all the way through.”',
+    image: '/og-image.png',
+    imageAlt: 'Marine HVAC retrofit case study graphic.'
+  },
+  {
+    title: 'Service, maintenance & coil cleaning programs',
+    location: 'Lockyer Valley & Somerset Regions',
+    summary:
+      'Rolled out comprehensive maintenance contracts covering coil sanitisation, pest protection, and proactive system optimisation for domestic and commercial clients.',
+    slug: 'service-maintenance-programs',
+    outcomes: [
+      'Improved indoor air quality through regular indoor unit sanitisation.',
+      'Reduced emergency call-outs thanks to early detection of wear and corrosion.',
+      'Priority scheduling and discounted rates delivered to contract customers.'
+    ],
+    testimonial: '“Our systems now run cleaner, cheaper, and with far fewer surprises. The maintenance reports make budgeting easy.”',
+    image: '/service/service-maintenance-2.jpg',
+    imageAlt: 'Technician servicing outdoor air conditioning condenser coils.'
+  },
+  {
+    title: 'System design & installation engineering',
+    location: 'Queensland wide',
+    summary:
+      'Engineered and installed right-sized ducted and split systems with professional commissioning, pest protection, and transparent pricing.',
+    slug: 'system-design-installation',
+    outcomes: [
+      'Right-sized equipment prevents short cycling and protects long-term performance.',
+      'Heat-load calculations and duct design deliver balanced comfort for every zone.',
+      'Mandatory vacuum testing and sealing provide superior reliability from day one.'
+    ],
+    testimonial: '“The new system runs quietly, holds temperature perfectly, and the install crew explained every step. True professionals.”',
+    image: '/og-image.png',
+    imageAlt: 'HVAC system design and installation planning session.'
+  },
+  {
+    title: 'Ducted comfort upgrade for a rural homestead',
+    location: 'Fernvale, QLD',
+    summary:
+      'Designed a slimline ducted system with zoned control to suit a heritage homestead, complete with pest deterrents and discreet finishes.',
+    slug: 'design-project-1',
+    outcomes: [
+      'Temperature variance cut to within 1.5°C across the home.',
+      'Energy use dropped 12% compared with the previous patchwork of units.',
+      'Pest-related faults eliminated thanks to sealed penetrations.'
+    ],
+    testimonial: '“The system is invisible, the house finally feels even, and geckos are no longer an issue.”',
+    image: '/design/design-project-1.jpg',
+    imageAlt: 'Ducted air conditioning integrated into a homestead living area.'
+  },
+  {
+    title: 'Multi-head split system for a heritage cottage',
+    location: 'Lowood, QLD',
+    summary:
+      'Delivered targeted comfort with a three-port multi-head split system and custom-colour pipe covers to preserve the cottage façade.',
+    slug: 'design-project-2',
+    outcomes: [
+      'Independent comfort for home office, bedrooms, and living zones.',
+      'Street façade preserved with concealed pipework and drains.',
+      'Pest ingress stopped through sealed penetrations and deterrents.'
+    ],
+    testimonial: '“The install blends perfectly with the cottage and each room is comfortable all day.”',
+    image: '/design/design-project-2.jpg',
+    imageAlt: 'Outdoor multi-head split system installation on a heritage cottage.'
+  },
+  {
+    title: 'Retail fit-out HVAC design',
+    location: 'Gatton Marketplace, QLD',
+    summary:
+      'Concealed bulkhead system with linear diffusers keeps a boutique retail tenancy comfortable despite extensive glazing.',
+    slug: 'design-project-3',
+    outcomes: [
+      'Comfort maintained within ±1°C despite afternoon solar gain.',
+      'Ceiling aesthetics preserved to suit premium merchandising.',
+      'Energy use tracked through BMS integration for landlord reporting.'
+    ],
+    testimonial: '“Exactly the look and comfort we wanted—customers notice the products, not the air con.”',
+    image: '/design/design-project-3.jpg',
+    imageAlt: 'Retail HVAC bulkhead design with ceiling diffusers.'
+  },
+  {
+    title: 'Workshop HVAC & ventilation for agricultural machinery',
+    location: 'Esk, QLD',
+    summary:
+      'Hybrid ventilation and conditioned air keep an agricultural workshop cooler, cleaner, and compliant during heavy machinery repairs.',
+    slug: 'design-project-4',
+    outcomes: [
+      'Ambient temperatures dropped 6°C during peak afternoons.',
+      'Targeted fume extraction improved safety compliance.',
+      'Technician productivity increased thanks to better air quality.'
+    ],
+    testimonial: '“The shop is cooler, cleaner, and the crew can work full shifts without heat fatigue.”',
+    image: '/design/design-project-4.jpg',
+    imageAlt: 'Industrial workshop HVAC ducts and ventilation.'
+  },
+  {
+    title: 'Medical clinic HVAC fit-out',
+    location: 'Somerset Region, QLD',
+    summary:
+      'Installed quiet cassette and ducted systems with enhanced filtration to support infection control in a new medical practice.',
+    slug: 'design-project-5',
+    outcomes: [
+      'Consult rooms maintain near-silent comfort for patients.',
+      'Fresh-air intake meets clinic hygiene policies.',
+      'Maintenance access allows filter changes before consulting hours.'
+    ],
+    testimonial: '“Patients notice how calm and comfortable the rooms feel—exactly what we hoped for.”',
+    image: '/design/design-project-5.jpg',
+    imageAlt: 'Medical clinic HVAC diffusers and lighting integration.'
+  },
+  {
+    title: 'Hospitality HVAC upgrade for a country pub',
+    location: 'Somerset Region, QLD',
+    summary:
+      'Engineered a multi-zone hospitality solution covering a sports bar, dining room, and enclosed function space.',
+    slug: 'design-project-6',
+    outcomes: [
+      'Function space now holds comfort during sell-out events.',
+      'Bar patrons experience cleaner air with reduced kitchen spillover.',
+      'Maintenance can be completed between lunch and dinner service.'
+    ],
+    testimonial: '“Weekends are busy but the rooms stay comfortable and the air stays fresh.”',
+    image: '/design/design-project-6.jpg',
+    imageAlt: 'Hospitality venue with new HVAC diffusers.'
+  },
+  {
+    title: 'Climate control for agricultural packing shed',
+    location: 'Lockyer Valley, QLD',
+    summary:
+      'Introduced evaporative cooling, destratification, and air curtains to stabilise produce packing lanes in a dusty environment.',
+    slug: 'design-project-7',
+    outcomes: [
+      'Produce temperatures stabilised through the packing workflow.',
+      'Worker comfort improved, reducing heat-related breaks.',
+      'Filters now last full service intervals due to pre-filtration measures.'
+    ],
+    testimonial: '“The shed stays cooler, the produce holds up, and our team is happier on long shifts.”',
+    image: '/design/design-project-7.jpg',
+    imageAlt: 'Agricultural packing shed with climate control equipment.'
+  },
+  {
+    title: 'Marina operations office HVAC retrofit',
+    location: 'Moreton Bay, QLD',
+    summary:
+      'Retrofitted a coastal marina office with marine-rated equipment, humidity control, and pest deterrents to protect critical systems.',
+    slug: 'design-project-8',
+    outcomes: [
+      'Humidity maintained between 50–55% to protect navigation equipment.',
+      'Corrosion-resistant components extend system life.',
+      'Staff and visitors enjoy quieter, more comfortable spaces.'
+    ],
+    testimonial: '“The office finally feels dry and comfortable, and salt damage is no longer a worry.”',
+    image: '/design/design-project-8.png',
+    imageAlt: 'Marina office HVAC design blueprint.'
+  }
+];
 ---
 
 <Layout {...seo}>
   <Header />
-  <main>
-    {/* Hero Section */}
-    <section class="bg-gradient-to-b from-indigo-50 to-white py-20">
-      <div class="container mx-auto max-w-7xl px-4">
-        <div class="text-center">
-          <h1 class="text-4xl md:text-5xl font-bold text-gray-800 mb-6">
-            Success Stories
-          </h1>
-          <p class="text-xl text-gray-600 max-w-3xl mx-auto">
-            Discover how organizations are transforming their security auditing process and achieving remarkable results with Audit Pro.
-          </p>
-        </div>
-      </div>
-    </section>
-
-    {/* Featured Case Study */}
-    <section class="py-16">
-      <div class="container mx-auto max-w-7xl px-4">
-        <div class="bg-white rounded-2xl shadow-xl overflow-hidden">
-          <div class="grid md:grid-cols-2 gap-8">
-            <div class="p-8 md:p-12">
-              <div class="flex items-center mb-6">
-                <div class="w-16 h-16 bg-blue-100 rounded-lg flex items-center justify-center mr-4">
-                  🏢
-                </div>
-                <div>
-                  <h3 class="text-2xl font-bold text-gray-800">TechCorp Global</h3>
-                  <p class="text-gray-600">Enterprise Technology Solutions</p>
-                </div>
-              </div>
-              <div class="space-y-6">
-                <div>
-                  <h4 class="text-lg font-semibold text-gray-800 mb-2">Challenge</h4>
-                  <p class="text-gray-600">
-                    Managing security audits across 200+ cloud services and applications while maintaining compliance with multiple international standards.
-                  </p>
-                </div>
-                <div>
-                  <h4 class="text-lg font-semibold text-gray-800 mb-2">Solution</h4>
-                  <p class="text-gray-600">
-                    Implemented Audit Pro's automated security assessment platform with custom compliance templates and real-time monitoring.
-                  </p>
-                </div>
-                <div>
-                  <h4 class="text-lg font-semibold text-gray-800 mb-2">Results</h4>
-                  <ul class="space-y-2">
-                    <li class="flex items-center">
-                      <svg class="w-5 h-5 text-green-500 mr-3" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7" />
-                      </svg>
-                      <span class="text-gray-600">75% reduction in audit completion time</span>
-                    </li>
-                    <li class="flex items-center">
-                      <svg class="w-5 h-5 text-green-500 mr-3" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7" />
-                      </svg>
-                      <span class="text-gray-600">100% compliance achievement rate</span>
-                    </li>
-                    <li class="flex items-center">
-                      <svg class="w-5 h-5 text-green-500 mr-3" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7" />
-                      </svg>
-                      <span class="text-gray-600">$2M annual cost savings</span>
-                    </li>
-                  </ul>
-                </div>
-                <Button className="bg-blue-600 hover:bg-blue-700 text-white">
-                  Read Full Case Study →
-                </Button>
-              </div>
-            </div>
-            <div class="bg-gradient-to-br from-blue-50 to-indigo-50 p-8 md:p-12 flex items-center">
-              <blockquote class="text-xl text-gray-800 italic">
-                "Audit Pro has revolutionized our security audit process. What used to take months now takes weeks, and the quality of our assessments has improved dramatically."
-                <footer class="mt-4 text-gray-600 not-italic">
-                  <div class="font-semibold">Sarah Martinez</div>
-                  <div class="text-sm">Chief Information Security Officer</div>
-                </footer>
-              </blockquote>
-            </div>
-          </div>
-        </div>
-      </div>
-    </section>
-
-    {/* Success Metrics */}
-    <section class="py-16 bg-gray-50">
-      <div class="container mx-auto max-w-7xl px-4">
-        <div class="grid grid-cols-2 md:grid-cols-4 gap-8">
-          <div class="text-center">
-            <div class="text-4xl font-bold text-blue-600 mb-2">75%</div>
-            <p class="text-gray-600">Average Time Saved</p>
-          </div>
-          <div class="text-center">
-            <div class="text-4xl font-bold text-blue-600 mb-2">100%</div>
-            <p class="text-gray-600">Compliance Rate</p>
-          </div>
-          <div class="text-center">
-            <div class="text-4xl font-bold text-blue-600 mb-2">$2M+</div>
-            <p class="text-gray-600">Average Savings</p>
-          </div>
-          <div class="text-center">
-            <div class="text-4xl font-bold text-blue-600 mb-2">98%</div>
-            <p class="text-gray-600">Client Satisfaction</p>
-          </div>
-        </div>
-      </div>
-    </section>
-
-    {/* More Success Stories */}
-    <section class="py-16">
-      <div class="container mx-auto max-w-7xl px-4">
-        <h2 class="text-3xl font-bold text-gray-800 mb-12 text-center">More Success Stories</h2>
-        <div class="grid md:grid-cols-3 gap-8">
-          {/* FinTech Success Story */}
-          <div class="bg-white rounded-xl shadow-md overflow-hidden">
-            <div class="p-6">
-              <div class="flex items-center mb-4">
-                <div class="w-12 h-12 bg-green-100 rounded-lg flex items-center justify-center mr-4">
-                  💰
-                </div>
-                <div>
-                  <h3 class="font-semibold text-gray-800">SecureBank Financial</h3>
-                  <p class="text-sm text-gray-600">Financial Services</p>
-                </div>
-              </div>
-              <p class="text-gray-600 mb-4">
-                Achieved SOC 2 compliance in record time while reducing security audit costs by 60%.
-              </p>
-              <Button variant="outline" className="w-full">Read Story →</Button>
-            </div>
-          </div>
-
-          {/* Healthcare Success Story */}
-          <div class="bg-white rounded-xl shadow-md overflow-hidden">
-            <div class="p-6">
-              <div class="flex items-center mb-4">
-                <div class="w-12 h-12 bg-blue-100 rounded-lg flex items-center justify-center mr-4">
-                  🏥
-                </div>
-                <div>
-                  <h3 class="font-semibold text-gray-800">HealthTech Solutions</h3>
-                  <p class="text-sm text-gray-600">Healthcare Technology</p>
-                </div>
-              </div>
-              <p class="text-gray-600 mb-4">
-                Streamlined HIPAA compliance audits across 50+ facilities while improving security posture.
-              </p>
-              <Button variant="outline" className="w-full">Read Story →</Button>
-            </div>
-          </div>
-
-          {/* E-commerce Success Story */}
-          <div class="bg-white rounded-xl shadow-md overflow-hidden">
-            <div class="p-6">
-              <div class="flex items-center mb-4">
-                <div class="w-12 h-12 bg-purple-100 rounded-lg flex items-center justify-center mr-4">
-                  🛍️
-                </div>
-                <div>
-                  <h3 class="font-semibold text-gray-800">ShopSmart Global</h3>
-                  <p class="text-sm text-gray-600">E-commerce Platform</p>
-                </div>
-              </div>
-              <p class="text-gray-600 mb-4">
-                Automated PCI DSS compliance monitoring while scaling operations across 15 countries.
-              </p>
-              <Button variant="outline" className="w-full">Read Story →</Button>
-            </div>
-          </div>
-        </div>
-      </div>
-    </section>
-
-    {/* Testimonial Grid */}
-    <section class="py-16 bg-gray-50">
-      <div class="container mx-auto max-w-7xl px-4">
-        <h2 class="text-3xl font-bold text-gray-800 mb-12 text-center">What Our Clients Say</h2>
-        <div class="grid md:grid-cols-3 gap-8">
-          <div class="bg-white p-6 rounded-xl shadow-sm">
-            <div class="text-3xl text-blue-300 mb-4">❝</div>
-            <p class="text-gray-600 mb-6">
-              "The automated compliance checks and real-time monitoring have transformed how we handle security audits."
-            </p>
-            <div class="flex items-center">
-              <div class="w-12 h-12 bg-gray-200 rounded-full"></div>
-              <div class="ml-4">
-                <p class="font-medium">Michael Chang</p>
-                <p class="text-sm text-gray-600">Security Director, CloudTech Inc</p>
-              </div>
-            </div>
-          </div>
-
-          <div class="bg-white p-6 rounded-xl shadow-sm">
-            <div class="text-3xl text-blue-300 mb-4">❝</div>
-            <p class="text-gray-600 mb-6">
-              "Audit Pro's AI-powered analysis has helped us identify and address security gaps we didn't even know existed."
-            </p>
-            <div class="flex items-center">
-              <div class="w-12 h-12 bg-gray-200 rounded-full"></div>
-              <div class="ml-4">
-                <p class="font-medium">Rachel Stevens</p>
-                <p class="text-sm text-gray-600">CISO, DataSafe Solutions</p>
-              </div>
-            </div>
-          </div>
-
-          <div class="bg-white p-6 rounded-xl shadow-sm">
-            <div class="text-3xl text-blue-300 mb-4">❝</div>
-            <p class="text-gray-600 mb-6">
-              "The ROI was immediate. We've cut our audit time in half while improving the accuracy of our assessments."
-            </p>
-            <div class="flex items-center">
-              <div class="w-12 h-12 bg-gray-200 rounded-full"></div>
-              <div class="ml-4">
-                <p class="font-medium">David Wilson</p>
-                <p class="text-sm text-gray-600">CTO, SecureNet Systems</p>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-    </section>
-
-    {/* CTA Section */}
-    <section class="py-16 bg-gradient-to-r from-orange-100 to-blue-100">
-      <div class="container mx-auto max-w-7xl px-4 text-center">
-        <h2 class="text-3xl font-bold text-gray-800 mb-6">
-          Ready to Write Your Success Story?
-        </h2>
-        <p class="text-xl text-gray-600 mb-8 max-w-3xl mx-auto">
-          Join these successful organizations and transform your security auditing process with Audit Pro.
+  <main class="bg-white">
+    <section class="bg-gradient-to-b from-sky-50 via-white to-slate-100 py-20">
+      <div class="container mx-auto max-w-4xl px-4 text-center space-y-4">
+        <p class="text-sm font-semibold uppercase tracking-wide text-sky-700">Project Highlights</p>
+        <h1 class="text-3xl md:text-5xl font-bold text-slate-900">Stories that show our country care in action</h1>
+        <p class="text-lg text-slate-700">
+          From emergency call-outs to long-term maintenance programs and engineered installs, see how Queensland neighbours rely on MKS Rural Services to keep refrigeration and HVAC assets performing.
         </p>
-        <div class="flex justify-center gap-4">
-          <Button size="lg" className="bg-orange-500 hover:bg-orange-600 text-white">
-            Start Free Trial
-          </Button>
-          <Button size="lg" variant="outline">
-            Schedule Demo
-          </Button>
-        </div>
+      </div>
+    </section>
+
+    <section class="py-16">
+      <div class="container mx-auto max-w-6xl px-4 grid gap-8 md:grid-cols-2">
+        {projects.map((project) => (
+          <a
+            key={project.slug}
+            href={`/projects/${project.slug}`}
+            class="group rounded-3xl border border-slate-200 bg-white p-6 shadow-sm transition-transform hover:-translate-y-1 hover:shadow-lg focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-sky-600"
+          >
+            <div class="aspect-[3/2] w-full overflow-hidden rounded-2xl bg-slate-100">
+              <img
+                src={project.image}
+                alt={project.imageAlt}
+                class="h-full w-full object-cover transition-transform duration-300 group-hover:scale-105"
+                loading="lazy"
+              />
+            </div>
+            <div class="mt-6 space-y-4">
+              <div class="flex items-center justify-between text-sm font-semibold uppercase tracking-wide text-sky-700">
+                <span>{project.location}</span>
+                <span>View report →</span>
+              </div>
+              <h2 class="text-2xl font-semibold text-slate-900">{project.title}</h2>
+              <p class="text-base text-slate-700">{project.summary}</p>
+              <ul class="space-y-2 text-sm text-slate-600">
+                {project.outcomes.map((outcome) => (
+                  <li key={outcome}>• {outcome}</li>
+                ))}
+              </ul>
+              <blockquote class="border-l-4 border-sky-600 pl-4 text-sm italic text-slate-700">{project.testimonial}</blockquote>
+            </div>
+          </a>
+        ))}
       </div>
     </section>
   </main>

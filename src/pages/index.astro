@@ -1,16 +1,15 @@
 ---
 import Layout from '../layouts/main.astro';
-import AuditProApp from '../components/AuditProApp';
+import MksApp from '../components/MksApp';
 
-// SEO metadata specific to homepage
 const seo = {
-	title: "Audit Pro - Modern Security Auditing & Compliance Platform",
-	description: "Transform your security auditing process with AI-powered assessment tools, automated compliance checks, and comprehensive quality management. Built with Astro, React, and TypeScript for optimal performance.",
-	image: "/og-image.png",
-	canonicalURL: Astro.site + Astro.url.pathname,
+  title: 'MKS Rural Services | Refrigeration & HVAC Experts in Queensland',
+  description: 'Family-owned, fully licensed refrigeration and air conditioning specialists providing repairs, installations, and maintenance across the Lockyer Valley, Somerset Region, and greater Queensland.',
+  image: '/og-image.png',
+  canonicalURL: Astro.site + Astro.url.pathname,
 };
 ---
 
 <Layout {...seo}>
-	<AuditProApp client:load />
+  <MksApp client:load />
 </Layout>

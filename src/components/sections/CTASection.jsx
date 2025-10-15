@@ -1,31 +1,36 @@
 import React from 'react';
 import { Button } from '@/components/ui/button';
+import { Quote } from 'lucide-react';
 
 const CTASection = () => {
   return (
-    <div className="py-16 bg-gradient-to-r from-orange-100 to-blue-100">
-      <div className="container mx-auto max-w-7xl text-center">
-        <h2 className="text-3xl font-bold text-gray-800 mb-6">
-          The only{' '}
-          <span className="marker-underline">complete audit solution</span>
-        </h2>
-        
-        <p className="text-lg text-gray-700 mb-8 max-w-3xl mx-auto">
-          Since 2015, over 4,000 organizations have used Audit Pro to find and win more audit opportunities, empowering them to expand their impact on critical missions such as evaluating cybersecurity measures, ensuring data protection, and improving IT security standards.
-        </p>
-        
-        <div className="flex flex-col sm:flex-row justify-center gap-4 max-w-xl mx-auto">
-          <input 
-            type="email" 
-            placeholder="Enter your work email address" 
-            className="px-4 py-3 rounded-md border border-gray-300 flex-grow"
-          />
-          <Button className="bg-orange-500 hover:bg-orange-600 text-white px-6 py-3">
-            Start your free trial
+    <section id="contact" className="py-20 bg-gradient-to-r from-sky-900 via-sky-800 to-slate-900 text-white">
+      <div className="container mx-auto max-w-5xl px-4 space-y-10">
+        <div>
+          <h2 className="text-3xl md:text-4xl font-bold">Ready to discuss your refrigeration and air conditioning needs?</h2>
+          <p className="mt-4 text-lg text-sky-100">
+            Contact us today for a free consultation. We treat your HVAC problem like our own and stay until the job is finished properly.
+          </p>
+        </div>
+        <div className="grid gap-6 md:grid-cols-[auto,1fr] md:items-center">
+          <Button size="lg" className="bg-white text-sky-800 hover:bg-slate-100 px-8 py-6 w-full md:w-auto" asChild>
+            <a href="tel:0405837584">Call 0405 837 584</a>
           </Button>
+          <div className="text-sm md:text-base text-sky-100">
+            Prefer to write it down? Email <a href="mailto:admin@mksruralservices.com" className="font-semibold text-white underline-offset-4 hover:underline">admin@mksruralservices.com</a>
+          </div>
+        </div>
+        <div className="rounded-2xl bg-white/10 p-6 backdrop-blur">
+          <div className="flex items-start gap-4">
+            <Quote className="h-8 w-8 text-sky-200" />
+            <div>
+              <p className="text-lg font-medium text-white">“MKS has always come through with prompt service, and did an awesome job.”</p>
+              <p className="mt-2 text-sm text-sky-100">Local Customer Review</p>
+            </div>
+          </div>
         </div>
       </div>
-    </div>
+    </section>
   );
 };
 

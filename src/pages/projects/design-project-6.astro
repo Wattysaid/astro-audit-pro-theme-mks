@@ -1,0 +1,63 @@
+---
+import ProjectPage from '../../layouts/project-page.astro';
+
+const seo = {
+  title: 'Hospitality HVAC Design | Country Pub Case Study',
+  description: 'Learn how MKS Rural Services designed an HVAC upgrade for a country pub, balancing dining comfort, bar ventilation, and a busy function space.',
+  image: '/design/design-project-6.jpg',
+  canonicalURL: Astro.site + Astro.url.pathname,
+};
+---
+
+<ProjectPage
+  seo={seo}
+  overline="Design & Installation Report"
+  title="Hospitality HVAC Upgrade for a Country Pub"
+  summary="A refurbished country pub needed modern climate control across the bar, dining room, and function space. We delivered a resilient design ready for weekend crowds and kitchen heat loads."
+  heroImage="/design/design-project-6.jpg"
+  heroImageAlt="Hospitality venue with new HVAC diffusers"
+>
+  <section class="grid gap-8 md:grid-cols-2">
+    <article class="rounded-2xl border border-slate-200 bg-white p-6 shadow-sm">
+      <h2 class="text-xl font-semibold text-slate-900">Client snapshot</h2>
+      <p class="mt-3 text-base text-slate-700">
+        Regional pub featuring heritage dining room, modern sports bar, and newly enclosed function area. High weekend traffic and a busy commercial kitchen.
+      </p>
+    </article>
+    <article class="rounded-2xl border border-slate-200 bg-white p-6 shadow-sm">
+      <h2 class="text-xl font-semibold text-slate-900">Primary goals</h2>
+      <ul class="mt-3 space-y-2 text-base text-slate-700">
+        <li>• Maintain comfortable temperatures despite fluctuating patron loads.</li>
+        <li>• Prevent kitchen exhaust from impacting the bar and dining spaces.</li>
+        <li>• Keep systems easy to service between trading hours.</li>
+      </ul>
+    </article>
+  </section>
+
+  <section class="space-y-6">
+    <h2 class="text-2xl font-bold text-slate-900">What we discovered</h2>
+    <ul class="space-y-3 text-base text-slate-700">
+      <li>Existing units undersized for the enclosed function room, leading to condensation and uncomfortable guests.</li>
+      <li>Kitchen exhaust short-circuited back into the dining area due to poor make-up air design.</li>
+      <li>Electrical infrastructure required balancing so peak loads didn’t trip breakers during events.</li>
+    </ul>
+  </section>
+
+  <section class="space-y-6">
+    <h2 class="text-2xl font-bold text-slate-900">Our solution</h2>
+    <ul class="space-y-3 text-base text-slate-700">
+      <li>Installed dedicated ducted systems for the function room with demand-controlled ventilation.</li>
+      <li>Balanced kitchen exhaust with filtered make-up air to protect diners from odours and heat.</li>
+      <li>Upgraded electrical distribution and added smart controllers for load management.</li>
+    </ul>
+  </section>
+
+  <section class="space-y-6">
+    <h2 class="text-2xl font-bold text-slate-900">Results delivered</h2>
+    <ul class="space-y-3 text-base text-slate-700">
+      <li>Function room comfort maintained during sell-out events, boosting event bookings.</li>
+      <li>Bar patrons report cleaner air with reduced kitchen spillover.</li>
+      <li>Maintenance access improved, allowing quick filter changes between lunch and dinner services.</li>
+    </ul>
+  </section>
+</ProjectPage>

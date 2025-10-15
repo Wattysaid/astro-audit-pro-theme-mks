@@ -1,0 +1,63 @@
+---
+import ProjectPage from '../../layouts/project-page.astro';
+
+const seo = {
+  title: 'Marina Office HVAC Retrofit | Coastal Facility Case Study',
+  description: 'MKS Rural Services retrofitted a marina operations office with corrosion-resistant HVAC, humidity control, and balanced fresh air.',
+  image: '/design/design-project-8.png',
+  canonicalURL: Astro.site + Astro.url.pathname,
+};
+---
+
+<ProjectPage
+  seo={seo}
+  overline="Design & Installation Report"
+  title="Marina Operations Office HVAC Retrofit"
+  summary="A coastal marina upgraded its operations office for year-round comfort and humidity control. We delivered a corrosion-resistant retrofit ready for salt spray and continuous operation."
+  heroImage="/design/design-project-8.png"
+  heroImageAlt="Marina office HVAC design blueprint"
+>
+  <section class="grid gap-8 md:grid-cols-2">
+    <article class="rounded-2xl border border-slate-200 bg-white p-6 shadow-sm">
+      <h2 class="text-xl font-semibold text-slate-900">Client snapshot</h2>
+      <p class="mt-3 text-base text-slate-700">
+        Marina operations centre with harbour master office, customer lounge, and equipment store. Salt-laden air and constant entry/exit challenged previous systems.
+      </p>
+    </article>
+    <article class="rounded-2xl border border-slate-200 bg-white p-6 shadow-sm">
+      <h2 class="text-xl font-semibold text-slate-900">Primary goals</h2>
+      <ul class="mt-3 space-y-2 text-base text-slate-700">
+        <li>• Control humidity to protect electronics and nautical charts.</li>
+        <li>• Resist corrosion and gecko ingress common in coastal plant rooms.</li>
+        <li>• Provide quiet comfort for customer interactions and staff concentration.</li>
+      </ul>
+    </article>
+  </section>
+
+  <section class="space-y-6">
+    <h2 class="text-2xl font-bold text-slate-900">What we discovered</h2>
+    <ul class="space-y-3 text-base text-slate-700">
+      <li>Existing units rusted within two years due to salt exposure.</li>
+      <li>Humidity regularly exceeded 75%, risking paperwork and electronics.</li>
+      <li>Outdoor plant area provided easy access for geckos, causing PCB failures.</li>
+    </ul>
+  </section>
+
+  <section class="space-y-6">
+    <h2 class="text-2xl font-bold text-slate-900">Our solution</h2>
+    <ul class="space-y-3 text-base text-slate-700">
+      <li>Installed marine-rated condensers with epoxy-coated coils and stainless fixings.</li>
+      <li>Added dedicated dehumidification cycle and coastal-grade filtration.</li>
+      <li>Sealed plant enclosures, applied gecko deterrents, and rerouted cabling through pest-proof conduit.</li>
+    </ul>
+  </section>
+
+  <section class="space-y-6">
+    <h2 class="text-2xl font-bold text-slate-900">Results delivered</h2>
+    <ul class="space-y-3 text-base text-slate-700">
+      <li>Humidity now maintained between 50–55%, protecting critical navigation equipment.</li>
+      <li>Corrosion mitigation extends system life beyond the previous units’ two-year average.</li>
+      <li>Staff and customers enjoy quieter, more welcoming spaces year-round.</li>
+    </ul>
+  </section>
+</ProjectPage>

@@ -1,0 +1,67 @@
+---
+import ProjectPage from '../../layouts/project-page.astro';
+
+const seo = {
+  title: 'Ducted Comfort Upgrade | Rural Homestead Case Study',
+  description: 'See how MKS Rural Services engineered a fully zoned ducted system for a rural homestead, balancing heritage architecture with modern performance.',
+  image: '/design/design-project-1.jpg',
+  canonicalURL: Astro.site + Astro.url.pathname,
+};
+---
+
+<ProjectPage
+  seo={seo}
+  overline="Design & Installation Report"
+  title="Ducted Comfort Upgrade for a Rural Homestead"
+  summary="A Fernvale family needed whole-home comfort without compromising the character of their timber homestead. We engineered a discreet ducted solution with zoned control and pest-resistant finishes."
+  heroImage="/design/design-project-1.jpg"
+  heroImageAlt="Ducted air conditioning supply integrated into a rural homestead living area"
+  ctaHeading="Planning a bespoke ducted install?"
+  ctaBody="Call 0405 837 584 or email admin@mksruralservices.com to book a design consultation for your home."
+  ctaPrimary={{ label: 'Call 0405 837 584', href: 'tel:0405837584' }}
+  ctaSecondary={{ label: 'Request a design proposal', href: 'mailto:admin@mksruralservices.com?subject=Ducted%20Design%20Consultation' }}
+>
+  <section class="grid gap-8 md:grid-cols-2">
+    <article class="rounded-2xl border border-slate-200 bg-white p-6 shadow-sm">
+      <h2 class="text-xl font-semibold text-slate-900">Client snapshot</h2>
+      <p class="mt-3 text-base text-slate-700">
+        Four-bedroom Queenslander with raised floors, decorative ceilings, and limited roof cavity space. The owners wanted consistent comfort and quiet operation throughout the home.
+      </p>
+    </article>
+    <article class="rounded-2xl border border-slate-200 bg-white p-6 shadow-sm">
+      <h2 class="text-xl font-semibold text-slate-900">Primary goals</h2>
+      <ul class="mt-3 space-y-2 text-base text-slate-700">
+        <li>• Deliver even temperatures between sun-soaked living areas and shaded bedrooms.</li>
+        <li>• Hide ductwork and grilles so the homestead’s heritage features remained untouched.</li>
+        <li>• Keep geckos and insects out of the new system with proactive sealing and deterrents.</li>
+      </ul>
+    </article>
+  </section>
+
+  <section class="space-y-6">
+    <h2 class="text-2xl font-bold text-slate-900">What we discovered</h2>
+    <ul class="space-y-3 text-base text-slate-700">
+      <li>Roof space varied between 400–600 mm, limiting traditional duct runs and requiring slimline fabrication.</li>
+      <li>Existing wiring pathways were perfect nesting spots for geckos, previously shorting a split system PCB.</li>
+      <li>Open-plan living spaces needed independent control from sleep zones to manage family routines.</li>
+    </ul>
+  </section>
+
+  <section class="space-y-6">
+    <h2 class="text-2xl font-bold text-slate-900">Our solution</h2>
+    <ul class="space-y-3 text-base text-slate-700">
+      <li>Collaborated with a mechanical engineer to design slimline ductwork with custom plenums for the heritage ceiling profile.</li>
+      <li>Installed six zones with smart controllers so the family can tailor comfort to living, study, and bedroom wings.</li>
+      <li>Sealed every wall penetration, added stainless steel mesh, and deployed pest deterrents within outdoor enclosures.</li>
+    </ul>
+  </section>
+
+  <section class="space-y-6">
+    <h2 class="text-2xl font-bold text-slate-900">Results delivered</h2>
+    <ul class="space-y-3 text-base text-slate-700">
+      <li>Temperature variance now sits within 1.5°C across the home, even during summer storms.</li>
+      <li>Energy usage dropped 12% compared with the previous mix of wall splits and heaters.</li>
+      <li>No pest-related faults reported after six months thanks to improved sealing and deterrents.</li>
+    </ul>
+  </section>
+</ProjectPage>

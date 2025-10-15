@@ -1,0 +1,62 @@
+---
+import Layout from '@/layouts/main.astro';
+import Header from '@/components/layout/Header';
+import Footer from '@/components/layout/Footer';
+import ServiceCase from '@/components/service/ServiceCase.astro';
+import type { ServiceCaseStudy } from '@/lib/case-studies';
+import { caseStudies } from '@/lib/case-studies';
+
+export function getStaticPaths() {
+  return caseStudies.map((study) => ({
+    params: { service: study.serviceSlug, slug: study.slug },
+    props: { study },
+  }));
+}
+
+const { study } = Astro.props as { study: ServiceCaseStudy };
+
+const seo = {
+  title: `${study.title} | ${study.serviceName} | MKS Rural Services`,
+  description: study.summary,
+  image: '/og-image.png',
+  canonicalURL: Astro.site + Astro.url.pathname,
+};
+---
+
+<Layout {...seo}>
+  <Header />
+  <main class="bg-white">
+    <section class="bg-gradient-to-b from-sky-50 via-white to-slate-100 py-16">
+      <div class="container mx-auto max-w-3xl px-4 text-center space-y-3">
+        <p class="text-sm font-semibold uppercase tracking-wide text-sky-700">Example Project · {study.serviceName}</p>
+        <h1 class="text-3xl md:text-4xl font-bold text-slate-900">{study.title}</h1>
+        {study.location && <p class="text-sm font-semibold uppercase tracking-wide text-slate-500">{study.location}</p>}
+        <p class="text-base text-slate-700">{study.summary}</p>
+        <div class="pt-2">
+          <a
+            href={`/services/${study.serviceSlug}`}
+            class="inline-flex items-center gap-2 text-sm font-semibold text-sky-700 hover:underline"
+          >
+            ← Back to {study.serviceName}
+          </a>
+        </div>
+      </div>
+    </section>
+
+    <section class="py-16">
+      <div class="container mx-auto max-w-4xl px-4">
+        <ServiceCase
+          feedback={study.feedback}
+          goals={study.goals}
+          location={study.location}
+          results={study.results}
+          snapshot={study.snapshot}
+          solution={study.solution}
+          title={study.title}
+          discovery={study.discovery}
+        />
+      </div>
+    </section>
+  </main>
+  <Footer />
+</Layout>

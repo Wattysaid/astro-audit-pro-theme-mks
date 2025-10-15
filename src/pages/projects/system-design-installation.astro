@@ -1,0 +1,122 @@
+---
+import ProjectPage from '../../layouts/project-page.astro';
+
+const seo = {
+  title: 'System Design & Installation | MKS Rural Services Engineering Report',
+  description: 'Discover how MKS Rural Services delivers precision HVAC design, ducted solutions, and split system installations engineered for energy efficiency, comfort, and long-term reliability.',
+  image: '/og-image.png',
+  canonicalURL: Astro.site + Astro.url.pathname,
+};
+---
+
+<ProjectPage
+  seo={seo}
+  overline="Engineering Spotlight"
+  title="System Design & Installation Done Right"
+  summary="The foundation of every great HVAC system is proper design. We tailor each installation to the space, workload, and budget so you enjoy reliable comfort for years."
+  heroImage="/og-image.png"
+  heroImageAlt="HVAC system design and installation planning session"
+  ctaHeading="Ready for a tailored HVAC design?"
+  ctaBody="Contact us for a free quotation on a system engineered specifically for your requirements. We’ll guide you from initial design through commissioning and maintenance."
+  ctaPrimary={{ label: 'Call 0405 837 584', href: 'tel:0405837584' }}
+  ctaSecondary={{ label: 'Email the team', href: 'mailto:admin@mksruralservices.com?subject=System%20Design%20Enquiry' }}
+>
+  <section class="space-y-6">
+    <h2 class="text-2xl font-bold text-slate-900">Precision engineering for optimal performance</h2>
+    <p class="text-base text-slate-700">
+      Every building has unique heat loads and occupancy patterns. Our design process captures those details so we can size equipment accurately and protect your investment.
+    </p>
+    <div class="grid gap-6 md:grid-cols-3">
+      <article class="rounded-2xl border border-slate-200 bg-white p-6 shadow-sm">
+        <h3 class="text-lg font-semibold text-slate-900">Undersized systems</h3>
+        <p class="mt-3 text-sm text-slate-700">
+          Struggle during peak conditions, run constantly, drive up energy bills, and burn out components early.
+        </p>
+      </article>
+      <article class="rounded-2xl border border-slate-200 bg-white p-6 shadow-sm">
+        <h3 class="text-lg font-semibold text-slate-900">Oversized systems</h3>
+        <p class="mt-3 text-sm text-slate-700">
+          Cost more upfront, short-cycle, waste energy, and fail to control humidity properly.
+        </p>
+      </article>
+      <article class="rounded-2xl border border-slate-200 bg-white p-6 shadow-sm">
+        <h3 class="text-lg font-semibold text-slate-900">Right-sized systems</h3>
+        <p class="mt-3 text-sm text-slate-700">
+          Deliver consistent comfort, efficient operation, and a long service life — exactly what our design guarantees.
+        </p>
+      </article>
+    </div>
+  </section>
+
+  <section class="space-y-6">
+    <h2 class="text-2xl font-bold text-slate-900">Ducted air conditioning solutions</h2>
+    <div class="grid gap-6 md:grid-cols-2">
+      <article class="rounded-2xl border border-slate-200 bg-white p-6 shadow-sm">
+        <h3 class="text-xl font-semibold text-slate-900">Professional engineering partnership</h3>
+        <p class="mt-3 text-base text-slate-700">
+          We collaborate with certified air conditioning and refrigeration engineers to ensure every design meets Australian standards and your operational goals.
+        </p>
+      </article>
+      <article class="rounded-2xl border border-slate-200 bg-white p-6 shadow-sm">
+        <h3 class="text-xl font-semibold text-slate-900">Thorough load analysis</h3>
+        <p class="mt-3 text-base text-slate-700">
+          Heat gain calculations, duct sizing, zoning plans, and airflow modelling ensure each room gets the comfort it deserves.
+        </p>
+      </article>
+      <article class="rounded-2xl border border-slate-200 bg-white p-6 shadow-sm md:col-span-2">
+        <h3 class="text-xl font-semibold text-slate-900">Custom design solutions</h3>
+        <p class="mt-3 text-base text-slate-700">
+          We engineer systems for homes, offices, agricultural sheds, and specialised facilities, matching usage patterns and budget requirements.
+        </p>
+      </article>
+    </div>
+  </section>
+
+  <section class="space-y-6">
+    <h2 class="text-2xl font-bold text-slate-900">Split system excellence</h2>
+    <p class="text-base text-slate-700">
+      Split systems are popular for a reason — but only when installed with care. We focus on sizing, sealing, and protection so your unit delivers reliable comfort and air quality.
+    </p>
+    <div class="grid gap-6 md:grid-cols-2">
+      <article class="rounded-2xl border border-slate-200 bg-white p-6 shadow-sm">
+        <h3 class="text-xl font-semibold text-slate-900">Precision sizing</h3>
+        <p class="mt-3 text-base text-slate-700">
+          We assess construction, orientation, and daily usage to select the right capacity and configuration for each room.
+        </p>
+      </article>
+      <article class="rounded-2xl border border-slate-200 bg-white p-6 shadow-sm">
+        <h3 class="text-xl font-semibold text-slate-900">Complete penetration sealing</h3>
+        <p class="mt-3 text-base text-slate-700">
+          All wall penetrations are sealed to stop rodents and insects from using pipe covers as an entry point to your home or workplace.
+        </p>
+      </article>
+      <article class="rounded-2xl border border-slate-200 bg-white p-6 shadow-sm">
+        <h3 class="text-xl font-semibold text-slate-900">Full pipework insulation</h3>
+        <p class="mt-3 text-base text-slate-700">
+          Refrigerant lines and fittings receive full insulation coverage to prevent condensation and preserve efficiency.
+        </p>
+      </article>
+      <article class="rounded-2xl border border-slate-200 bg-white p-6 shadow-sm">
+        <h3 class="text-xl font-semibold text-slate-900">Mandatory vacuum testing</h3>
+        <p class="mt-3 text-base text-slate-700">
+          We use professional vacuum pumps and gauges to certify system integrity, avoiding hidden leaks and future faults.
+        </p>
+      </article>
+      <article class="rounded-2xl border border-slate-200 bg-white p-6 shadow-sm md:col-span-2">
+        <h3 class="text-xl font-semibold text-slate-900">Pest protection advantage</h3>
+        <p class="mt-3 text-base text-slate-700">
+          Strategic deterrents in outdoor units provide 2–3 months of defence against geckos and other pests that commonly damage electronics.
+        </p>
+      </article>
+    </div>
+  </section>
+
+  <section class="space-y-6">
+    <h2 class="text-2xl font-bold text-slate-900">Transparent process &amp; pricing</h2>
+    <ul class="space-y-3 text-base text-slate-700">
+      <li><strong>Free professional quotations</strong> – Comprehensive assessments and detailed written quotes with no obligation to proceed.</li>
+      <li><strong>Fair payment terms</strong> – For projects over $1,500, only a modest deposit is required on acceptance, giving you confidence and protection.</li>
+      <li><strong>Quality assurance</strong> – Installations comply with manufacturer specifications and Australian standards, backed by our workmanship guarantee.</li>
+    </ul>
+  </section>
+</ProjectPage>

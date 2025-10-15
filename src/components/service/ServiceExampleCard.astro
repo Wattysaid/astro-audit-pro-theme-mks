@@ -1,0 +1,26 @@
+---
+const { title, summary, href, location } = Astro.props as {
+  title: string;
+  summary: string;
+  href: string;
+  location?: string;
+};
+
+if (!title || !summary || !href) {
+  throw new Error('ServiceExampleCard requires `title`, `summary`, and `href` props.');
+}
+---
+
+<a
+  href={href}
+  class="group flex flex-col rounded-2xl border border-slate-200 bg-white p-5 shadow-sm transition-transform hover:-translate-y-1 hover:shadow-lg focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-sky-600"
+>
+  <div class="space-y-1">
+    {location && <p class="text-xs font-semibold uppercase tracking-wide text-sky-700">{location}</p>}
+    <h3 class="text-lg font-semibold text-slate-900">{title}</h3>
+  </div>
+  <p class="mt-2 grow text-sm text-slate-600">{summary}</p>
+  <span class="mt-4 inline-flex items-center text-sm font-semibold text-sky-700 group-hover:underline">
+    See project →
+  </span>
+</a>
